@@ -1,0 +1,11 @@
+# Load Zephyr Arch Kconfig descriptions.
+osource "/home/luna/ikt104g26v/zephyr/arch/rx/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/x86/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/xtensa/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/sparc/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/riscv/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/posix/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/mips/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/arm64/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/arm/Kconfig"
+osource "/home/luna/ikt104g26v/zephyr/arch/arc/Kconfig"

@@ -1,0 +1,1 @@
+"mcuboot":"/home/luna/ikt104g26v/bootloader/mcuboot":"/home/luna/ikt104g26v/bootloader/mcuboot/boot/zephyr/sysbuild"

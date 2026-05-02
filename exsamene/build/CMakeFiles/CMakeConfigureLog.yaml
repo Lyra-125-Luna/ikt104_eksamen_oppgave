@@ -1,0 +1,3082 @@
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:28 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    name: "ZephyrBuildConfiguration"
+    configs:
+      -
+        filename: "ZephyrBuildConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyrbuild-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: false
+      bypass_provider: false
+      names:
+        - "ZephyrBuild"
+      search_paths:
+        - "/home/luna/ikt104g26v/zephyr/../*"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: false
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: false
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/pkgRedirects/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/pkgRedirects/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/modules/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/modules/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/cmake/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/cmake/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/tools/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/tools/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/bootloader/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/bootloader/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/.west/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/.west/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/.venv/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/.venv/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:41 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    name: "ZephyrAppConfiguration"
+    configs:
+      -
+        filename: "ZephyrAppConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyrapp-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: false
+      bypass_provider: false
+      names:
+        - "ZephyrApp"
+      search_paths:
+        - "/home/luna/ikt104g26v/zephyr/assignments/exsamen"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: false
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: false
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/pkgRedirects/ZephyrAppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/pkgRedirects/zephyrapp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/ZephyrAppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/zephyrapp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/ccache.cmake:10 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CCACHE_FOUND"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ccache"
+    candidate_directories:
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/ccache"
+      - "/home/luna/ikt104g26v/.venv/bin/ccache"
+      - "/usr/local/sbin/ccache"
+      - "/usr/local/bin/ccache"
+      - "/usr/sbin/ccache"
+    found: "/usr/bin/ccache"
+    search_context:
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindZephyr-sdk.cmake:100 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindHostTools.cmake:51 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:9 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    name: "Zephyr-sdk"
+    components:
+      -
+        name: "LOAD"
+        required: false
+        found: false
+    configs:
+      -
+        filename: "Zephyr-sdkConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyr-sdk-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "0.0.0"
+      version_complete: "0.0.0"
+      exact: true
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Zephyr-sdk"
+      search_paths:
+        - "/usr"
+        - "/usr/local"
+        - "/opt"
+        - "/home/luna"
+        - "/home/luna/.local"
+        - "/home/luna/.local/opt"
+        - "/home/luna/bin"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/pkgRedirects/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/pkgRedirects/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/clion/439/bin/cmake/linux/x64/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/clion/439/bin/cmake/linux/x64/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/.venv/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/.venv/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/games/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/games/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/clion/439/bin/ninja/linux/x64/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/clion/439/bin/ninja/linux/x64/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/zephyr-sdk-0.17.4/cmake/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "insufficient_version"
+        message: "The version found is not compatible with the version requested."
+      -
+        path: "/home/luna/zephyr-sdk-0.17.4/cmake/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/zephyr-sdk-0.17.4/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/zephyr-sdk-0.17.4/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/zephyr-sdk-0.17.4/cmake/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "insufficient_version"
+        message: "The version found is not compatible with the version requested."
+      -
+        path: "/home/luna/zephyr-sdk-0.17.4/cmake/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/.local/Zephyr-sdkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/.local/zephyr-sdk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindHostTools.cmake:54 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:9 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "GPERF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gperf"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/gperf"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/gperf"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/gperf"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/gperf"
+      - "/home/luna/ikt104g26v/.venv/bin/gperf"
+      - "/usr/local/sbin/gperf"
+      - "/usr/local/bin/gperf"
+      - "/usr/sbin/gperf"
+    found: "/usr/bin/gperf"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindHostTools.cmake:57 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:9 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "OPENOCD"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "openocd"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    found: "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/openocd"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindHostTools.cmake:60 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:9 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "BOSSAC"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "bossac"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    found: "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/bossac"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindHostTools.cmake:65 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:9 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "IMGTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "imgtool.py"
+      - "imgtool"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/luna/ikt104g26v/bootloader/mcuboot/scripts/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/imgtool.py"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/imgtool"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/imgtool.py"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/imgtool"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/imgtool.py"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/imgtool"
+    found: "/home/luna/ikt104g26v/bootloader/mcuboot/scripts/imgtool.py"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindHostTools.cmake:68 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:9 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "PTY_INTERFACE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "winpty"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/winpty"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/winpty"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/winpty"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/winpty"
+      - "/home/luna/ikt104g26v/.venv/bin/winpty"
+      - "/usr/local/sbin/winpty"
+      - "/usr/local/bin/winpty"
+      - "/usr/sbin/winpty"
+      - "/usr/bin/winpty"
+      - "/sbin/winpty"
+      - "/bin/winpty"
+      - "/usr/games/winpty"
+      - "/usr/local/games/winpty"
+      - "/snap/bin/winpty"
+      - "/snap/clion/439/bin/ninja/linux/x64/winpty"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/compiler/gcc/generic.cmake:5 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindHostTools.cmake:113 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:9 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/compiler/gcc/generic.cmake:6 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindHostTools.cmake:113 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:9 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_GCOV"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcov"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcov"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindDtc.cmake:19 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/dts.cmake:10 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:131 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "DTC"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dtc"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    found: "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/dtc"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/compiler/gcc/target.cmake:8 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/compiler/gcc/target.cmake:26 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:5 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-objcopy"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-objcopy"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:6 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:7 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_AS"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-as"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-as"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:12 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:13 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:15 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-readelf"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-readelf"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:16 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-nm"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-nm"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:17 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-strip"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-strip"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:19 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_GDB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb-py"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb-py"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/bintools/gnu/target.cmake:31 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/FindTargetTools.cmake:106 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_GDB_NO_PY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/uname"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/uname"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/uname"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/uname"
+      - "/home/luna/ikt104g26v/.venv/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:207 (message)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      The target system is: Generic - 4.3.0 - arm
+      The host system is: Linux - 6.17.0-22-generic - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Program used to build from build.ninja files."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ninja-build"
+      - "ninja"
+      - "samu"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/ninja-build"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/ninja"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/samu"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/ninja-build"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/ninja"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/samu"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/ninja-build"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/ninja"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/samu"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/ninja-build"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/ninja"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/samu"
+      - "/home/luna/ikt104g26v/.venv/bin/ninja-build"
+      - "/home/luna/ikt104g26v/.venv/bin/ninja"
+      - "/home/luna/ikt104g26v/.venv/bin/samu"
+      - "/usr/local/sbin/ninja-build"
+      - "/usr/local/sbin/ninja"
+      - "/usr/local/sbin/samu"
+      - "/usr/local/bin/ninja-build"
+      - "/usr/local/bin/ninja"
+      - "/usr/local/bin/samu"
+      - "/usr/sbin/ninja-build"
+      - "/usr/sbin/ninja"
+      - "/usr/sbin/samu"
+      - "/usr/bin/ninja-build"
+    found: "/usr/bin/ninja"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/"
+    found: "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld: /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x34): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/"
+    found: "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/4.2.2/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-dlltool"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-dlltool"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-dlltool"
+      - "/usr/local/sbin/arm-zephyr-eabi-dlltool"
+      - "/usr/local/bin/arm-zephyr-eabi-dlltool"
+      - "/usr/sbin/arm-zephyr-eabi-dlltool"
+      - "/usr/bin/arm-zephyr-eabi-dlltool"
+      - "/sbin/arm-zephyr-eabi-dlltool"
+      - "/bin/arm-zephyr-eabi-dlltool"
+      - "/usr/games/arm-zephyr-eabi-dlltool"
+      - "/usr/local/games/arm-zephyr-eabi-dlltool"
+      - "/snap/bin/arm-zephyr-eabi-dlltool"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-dlltool"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/dlltool"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/dlltool"
+      - "/home/luna/ikt104g26v/.venv/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/usr/bin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/games/dlltool"
+      - "/usr/local/games/dlltool"
+      - "/snap/bin/dlltool"
+      - "/snap/clion/439/bin/ninja/linux/x64/dlltool"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-addr2line"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-tapi"
+      - "tapi"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-tapi"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-tapi"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-tapi"
+      - "/usr/local/sbin/arm-zephyr-eabi-tapi"
+      - "/usr/local/bin/arm-zephyr-eabi-tapi"
+      - "/usr/sbin/arm-zephyr-eabi-tapi"
+      - "/usr/bin/arm-zephyr-eabi-tapi"
+      - "/sbin/arm-zephyr-eabi-tapi"
+      - "/bin/arm-zephyr-eabi-tapi"
+      - "/usr/games/arm-zephyr-eabi-tapi"
+      - "/usr/local/games/arm-zephyr-eabi-tapi"
+      - "/snap/bin/arm-zephyr-eabi-tapi"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-tapi"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/tapi"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/tapi"
+      - "/home/luna/ikt104g26v/.venv/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/usr/bin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
+      - "/usr/games/tapi"
+      - "/usr/local/games/tapi"
+      - "/snap/bin/tapi"
+      - "/snap/clion/439/bin/ninja/linux/x64/tapi"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-gcc-ar-12.2"
+      - "arm-zephyr-eabi-gcc-ar-12"
+      - "arm-zephyr-eabi-gcc-ar12"
+      - "arm-zephyr-eabi-gcc-ar"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/sbin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/games/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/sbin/arm-zephyr-eabi-gcc-ar-12"
+      - "/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/games/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ar-12"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ar-12"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/sbin/arm-zephyr-eabi-gcc-ar12"
+      - "/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/games/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ar12"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ar12"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "arm-zephyr-eabi-gcc-ranlib-12"
+      - "arm-zephyr-eabi-gcc-ranlib12"
+      - "arm-zephyr-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/sbin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/games/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/sbin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/games/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/sbin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/games/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib12"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ranlib12"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/"
+    found: "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld: /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x34): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/"
+    found: "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/4.2.2/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-gcc-ar-12.2"
+      - "arm-zephyr-eabi-gcc-ar-12"
+      - "arm-zephyr-eabi-gcc-ar12"
+      - "arm-zephyr-eabi-gcc-ar"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/sbin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/games/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ar-12.2"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/sbin/arm-zephyr-eabi-gcc-ar-12"
+      - "/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/games/arm-zephyr-eabi-gcc-ar-12"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ar-12"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ar-12"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ar-12"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/sbin/arm-zephyr-eabi-gcc-ar12"
+      - "/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/games/arm-zephyr-eabi-gcc-ar12"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ar12"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ar12"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ar12"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "arm-zephyr-eabi-gcc-ranlib-12"
+      - "arm-zephyr-eabi-gcc-ranlib12"
+      - "arm-zephyr-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/sbin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/games/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ranlib-12.2"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/sbin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/games/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ranlib-12"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/sbin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/games/arm-zephyr-eabi-gcc-ranlib12"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib12"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ranlib12"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ranlib12"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake:61 (_cmake_find_compiler)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:135 (enable_language)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER"
+    description: "ASM compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:1290 (message)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:135 (enable_language)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-zephyr-eabi-gcc (Zephyr SDK 0.17.4) 12.2.0
+      Copyright (C) 2022 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:135 (enable_language)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-gcc-ar-"
+      - "arm-zephyr-eabi-gcc-ar-"
+      - "arm-zephyr-eabi-gcc-ar"
+      - "arm-zephyr-eabi-gcc-ar"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/sbin/arm-zephyr-eabi-gcc-ar-"
+      - "/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/games/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ar-"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ar-"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/sbin/arm-zephyr-eabi-gcc-ar-"
+      - "/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/games/arm-zephyr-eabi-gcc-ar-"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ar-"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ar-"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/snap/clion/439/bin/cmake/linux/x64/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake:135 (enable_language)"
+      - "/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:5 (find_package)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-zephyr-eabi-gcc-ranlib-"
+      - "arm-zephyr-eabi-gcc-ranlib-"
+      - "arm-zephyr-eabi-gcc-ranlib"
+      - "arm-zephyr-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/sbin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/games/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ranlib-"
+      - "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/home/luna/ikt104g26v/.venv/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/local/sbin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/local/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/sbin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/sbin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/games/arm-zephyr-eabi-gcc-ranlib-"
+      - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-"
+      - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/snap/clion/439/bin/ninja/linux/x64/arm-zephyr-eabi-gcc-ranlib-"
+    found: "/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/modules/lib/picolibc/CMakeLists.txt:49 (find_program)"
+    mode: "program"
+    variable: "CCACHE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ccache"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/ccache"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/ccache"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/ccache"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/ccache"
+      - "/home/luna/ikt104g26v/.venv/bin/ccache"
+      - "/usr/local/sbin/ccache"
+      - "/usr/local/bin/ccache"
+      - "/usr/sbin/ccache"
+    found: "/usr/bin/ccache"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/kobj.cmake:3 (find_program)"
+      - "/home/luna/ikt104g26v/zephyr/CMakeLists.txt:1003 (include)"
+    mode: "program"
+    variable: "GEN_KOBJECT_LIST"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gen_kobject_list"
+      - "gen_kobject_list.py"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+      - "/home/luna/ikt104g26v/zephyr/scripts/build/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/gen_kobject_list"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/gen_kobject_list"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/gen_kobject_list"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/gen_kobject_list"
+      - "/home/luna/ikt104g26v/.venv/bin/gen_kobject_list"
+      - "/usr/local/sbin/gen_kobject_list"
+      - "/usr/local/bin/gen_kobject_list"
+      - "/usr/sbin/gen_kobject_list"
+      - "/usr/bin/gen_kobject_list"
+      - "/sbin/gen_kobject_list"
+      - "/bin/gen_kobject_list"
+      - "/usr/games/gen_kobject_list"
+      - "/usr/local/games/gen_kobject_list"
+      - "/snap/bin/gen_kobject_list"
+      - "/snap/clion/439/bin/ninja/linux/x64/gen_kobject_list"
+      - "/home/luna/ikt104g26v/zephyr/scripts/build/gen_kobject_list"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/gen_kobject_list.py"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/gen_kobject_list.py"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/gen_kobject_list.py"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/gen_kobject_list.py"
+      - "/home/luna/ikt104g26v/.venv/bin/gen_kobject_list.py"
+      - "/usr/local/sbin/gen_kobject_list.py"
+      - "/usr/local/bin/gen_kobject_list.py"
+      - "/usr/sbin/gen_kobject_list.py"
+      - "/usr/bin/gen_kobject_list.py"
+      - "/sbin/gen_kobject_list.py"
+      - "/bin/gen_kobject_list.py"
+      - "/usr/games/gen_kobject_list.py"
+      - "/usr/local/games/gen_kobject_list.py"
+      - "/snap/bin/gen_kobject_list.py"
+      - "/snap/clion/439/bin/ninja/linux/x64/gen_kobject_list.py"
+    found: "/home/luna/ikt104g26v/zephyr/scripts/build/gen_kobject_list.py"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/reports/CMakeLists.txt:115 (find_program)"
+    mode: "program"
+    variable: "PUNCOVER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "puncover"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/puncover"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/puncover"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/puncover"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/puncover"
+      - "/home/luna/ikt104g26v/.venv/bin/puncover"
+      - "/usr/local/sbin/puncover"
+      - "/usr/local/bin/puncover"
+      - "/usr/sbin/puncover"
+      - "/usr/bin/puncover"
+      - "/sbin/puncover"
+      - "/bin/puncover"
+      - "/usr/games/puncover"
+      - "/usr/local/games/puncover"
+      - "/snap/bin/puncover"
+      - "/snap/clion/439/bin/ninja/linux/x64/puncover"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/luna/ikt104g26v/zephyr/cmake/reports/CMakeLists.txt:142 (find_program)"
+    mode: "program"
+    variable: "PAHOLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "pahole"
+    candidate_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/"
+      - "/home/luna/ikt104g26v/.venv/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/snap/clion/439/bin/ninja/linux/x64/"
+    searched_directories:
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/pahole"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/sbin/pahole"
+      - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/pahole"
+      - "/snap/clion/439/bin/cmake/linux/x64/bin/pahole"
+      - "/home/luna/ikt104g26v/.venv/bin/pahole"
+      - "/usr/local/sbin/pahole"
+      - "/usr/local/bin/pahole"
+      - "/usr/sbin/pahole"
+      - "/usr/bin/pahole"
+      - "/sbin/pahole"
+      - "/bin/pahole"
+      - "/usr/games/pahole"
+      - "/usr/local/games/pahole"
+      - "/snap/bin/pahole"
+      - "/snap/clion/439/bin/ninja/linux/x64/pahole"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:5 (find_package)"
+    name: "Zephyr"
+    configs:
+      -
+        filename: "ZephyrConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyr-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "/home/luna/ikt104g26v/zephyr"
+      names:
+        - "Zephyr"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/pkgRedirects/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/CMakeFiles/pkgRedirects/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/cmake/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/cmake/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/share/zephyrunittest-package/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/share/zephyrunittest-package/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/share/zephyr-package/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/share/zephyr-package/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/share/zephyrunittest-package/cmake/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/luna/ikt104g26v/zephyr/share/zephyrunittest-package/cmake/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake"
+      mode: "config"
+      version: "4.3.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr"
+      ENV{PATH}:
+        - "/snap/clion/439/bin/cmake/linux/x64/bin"
+        - "/home/luna/ikt104g26v/.venv/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/clion/439/bin/ninja/linux/x64"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+...

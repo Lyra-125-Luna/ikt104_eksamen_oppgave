@@ -1,0 +1,5 @@
+west:
+  command: /home/luna/ikt104g26v/.venv/bin/west build --build-dir /home/luna/ikt104g26v/zephyr/assignments/exsamen/build
+    /home/luna/ikt104g26v/zephyr/assignments/exsamen
+  topdir: /home/luna/ikt104g26v
+  version: 1.5.0

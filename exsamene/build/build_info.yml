@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/home/luna/ikt104g26v/zephyr/assignments/exsamen'
+    source-dir: '/home/luna/ikt104g26v/zephyr/assignments/exsamen'
+  board:
+    name: 'disco_l475_iot1'
+    path:
+     - '/home/luna/ikt104g26v/zephyr/boards/st/disco_l475_iot1'
+    qualifiers: 'stm32l475xx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/luna/ikt104g26v/zephyr/dts/bindings'
+    files:
+     - '/home/luna/ikt104g26v/zephyr/boards/st/disco_l475_iot1/disco_l475_iot1.dts'
+    include-dirs:
+     - '/home/luna/ikt104g26v/modules/hal/ambiq/dts'
+     - '/home/luna/ikt104g26v/modules/hal/atmel/include'
+     - '/home/luna/ikt104g26v/modules/hal/bouffalolab/include'
+     - '/home/luna/ikt104g26v/modules/hal/bouffalolab/include/zephyr'
+     - '/home/luna/ikt104g26v/modules/hal/gigadevice/include'
+     - '/home/luna/ikt104g26v/modules/hal/microchip/include'
+     - '/home/luna/ikt104g26v/modules/hal/microchip/dts'
+     - '/home/luna/ikt104g26v/modules/hal/nuvoton/dts'
+     - '/home/luna/ikt104g26v/modules/hal/nxp/dts'
+     - '/home/luna/ikt104g26v/modules/hal/stm32/dts'
+     - '/home/luna/ikt104g26v/modules/hal/ti/dts'
+     - '/home/luna/ikt104g26v/zephyr/include'
+     - '/home/luna/ikt104g26v/zephyr/include/zephyr'
+     - '/home/luna/ikt104g26v/zephyr/dts/common'
+     - '/home/luna/ikt104g26v/zephyr/dts/vendor'
+     - '/home/luna/ikt104g26v/zephyr/dts/rx'
+     - '/home/luna/ikt104g26v/zephyr/dts/x86'
+     - '/home/luna/ikt104g26v/zephyr/dts/xtensa'
+     - '/home/luna/ikt104g26v/zephyr/dts/sparc'
+     - '/home/luna/ikt104g26v/zephyr/dts/riscv'
+     - '/home/luna/ikt104g26v/zephyr/dts/posix'
+     - '/home/luna/ikt104g26v/zephyr/dts/arm64'
+     - '/home/luna/ikt104g26v/zephyr/dts/arm'
+     - '/home/luna/ikt104g26v/zephyr/dts/arc'
+     - '/home/luna/ikt104g26v/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/luna/ikt104g26v/zephyr/boards/st/disco_l475_iot1/disco_l475_iot1_defconfig'
+     - '/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf'
+    user-files:
+     - '/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/luna/zephyr-sdk-0.17.4'
+  zephyr:
+    version: '4.3.0'
+    zephyr-base: '/home/luna/ikt104g26v/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/luna/ikt104g26v/.venv/bin/west build --build-dir /home/luna/ikt104g26v/zephyr/assignments/exsamen/build /home/luna/ikt104g26v/zephyr/assignments/exsamen'
+  topdir: '/home/luna/ikt104g26v'
+  version: '1.5.0'
