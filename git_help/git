@@ -1,0 +1,42 @@
+how work with a git :
+
+clonig:
+
+    with link:
+git clone <link>
+
+    to see if ssh ekst:
+ls -la ~/.ssh
+
+    to make a ssh key:
+ssh-keygen -t ed25519 -C "<email>"
+ssh-add ~/.ssh/id_ed25519
+
+    copy shh key
+cat ~/.ssh/id_ed25519.pub
+
+commit:
+
+    to see git status is good to start with to know the file:
+git status
+
+    to add to the commit
+git add <file>
+
+    Commiting
+git commit -m "<messesg>"
+git push
+
+    with force
+git push --force-with-lease origin
+
+
+how to update git repostetory:
+
+    can use to see un update:
+git status
+
+    To pull from main
+
+git pull
+git pull origin main

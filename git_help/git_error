@@ -1,0 +1,25 @@
+# How to fix git error msg.
+
+
+git push:
+
+    git error 1 regectet:
+    
+try first:
+// working with ppl
+    
+    git pull origin main
+    git push origin main
+
+Then try:
+// woriking with ppl
+// cleanest history
+
+    git pull --rebase origin main
+    git push origin main
+
+If nether work then use 
+// woriking alone
+// not important chagens
+    git push --force origin main
+
