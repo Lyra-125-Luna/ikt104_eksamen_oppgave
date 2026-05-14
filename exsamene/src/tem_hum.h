@@ -1,13 +1,14 @@
-//
-// Created by luna on 4/22/26.
-//
-
 #ifndef BLINKY_TEM_HUM_H
 #define BLINKY_TEM_HUM_H
 
-void temp();
+// ================================
+// Temp / humidity functions
+// ================================
 
+void tem_hum_init(void);
+void tem_hum_update(void);
 
-void hum();
+double tem_hum_get_temp(void);
+double tem_hum_get_hum(void);
 
-#endif //BLINKY_TEM_HUM_H
+#endif

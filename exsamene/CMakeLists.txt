@@ -11,6 +11,8 @@ target_sources(app PRIVATE
         src/screen.c
         src/tem_hum.c
         src/network_config.c
+        src/alarm.c
         src/networking_config_news.c
         src/wifi_connect.c
         )
+

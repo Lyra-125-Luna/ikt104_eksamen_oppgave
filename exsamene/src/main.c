@@ -8,6 +8,7 @@
 #include <zephyr/drivers/sensor.h>
 #include <stdio.h>
 #include <zephyr/sys/__assert.h>
+#include "alarm.h"
 
 //filer
 #include "rgb_lcd.h"
@@ -46,6 +47,27 @@ K_THREAD_DEFINE(t_info_web, STACKSIZE_NETWORK, network_config_thread_entry, NULL
 // secend reqest:
 K_THREAD_DEFINE(t_news_web, STACKSIZE_NETWORK, network_config_thread_entry_news, NULL, NULL, NULL, PRIORITY, 0, START_SECOND_REQEST);
 
+K_THREAD_STACK_DEFINE(alarm_stack, STACKSIZE);
+struct k_thread alarm_thread;
+
+
+
+// ================================
+// Temperature / humidity thread
+// ================================
+void temp_hum_thread_entry(void *arg1, void *arg2, void *arg3)
+{
+	ARG_UNUSED(arg1);
+	ARG_UNUSED(arg2);
+	ARG_UNUSED(arg3);
+
+	tem_hum_init();
+
+	while (1) {
+		tem_hum_update();
+		k_sleep(K_SECONDS(2));
+	}
+}
 
 //structs
 	//trå
@@ -66,8 +88,16 @@ int main(void)
 	//boot
 	// k_thread_create(&t1, stack_1,STACKSIZE, boot, &m, NULL, NULL, PRIORITY, 0, K_NO_WAIT);
 
-	//Temp -> hum
+	// Alarm
+	k_thread_create(&alarm_thread, alarm_stack, STACKSIZE,
+					alarm_thread_entry, NULL, NULL, NULL,
+					PRIORITY, 0, K_NO_WAIT);
 
+
+	// Temperature / humidity
+	k_thread_create(&t2, stack_2, STACKSIZE,
+					temp_hum_thread_entry, NULL, NULL, NULL,
+					PRIORITY, 0, K_NO_WAIT);
 	//k_thread_create(&t2, stack_2,STACKSIZE, temp, &m, NULL, NULL, PRIORITY, 0, K_NO_WAIT);
 	//k_thread_create(&t3, stack_2,STACKSIZE, hum, &m, NULL, NULL, PRIORITY, 0, K_NO_WAIT);
 
