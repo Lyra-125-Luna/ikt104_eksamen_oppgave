@@ -1,0 +1,354 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_link_libraries_ifdef",
+			"target_ld_options",
+			"zephyr_ld_options",
+			"zephyr_link_libraries",
+			"zephyr_link_libraries_ifdef",
+			"toolchain_ld_force_undefined_symbols",
+			"zephyr_link_libraries_ifndef",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"/home/luna/ikt104g26v/zephyr/CMakeLists.txt",
+			"/home/luna/ikt104g26v/zephyr/cmake/modules/extensions.cmake",
+			"/home/luna/ikt104g26v/zephyr/cmake/linker/ld/target.cmake",
+			"/home/luna/ikt104g26v/zephyr/arch/common/CMakeLists.txt",
+			"/home/luna/ikt104g26v/zephyr/lib/libc/newlib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 114,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 474,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 164,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 2407,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 2044,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 479,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 164,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 2407,
+				"parent" : 7
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 2044,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 487,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 141,
+				"parent" : 10
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 495,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 2092,
+				"parent" : 12
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 141,
+				"parent" : 13
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 497,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 96,
+				"parent" : 15
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 144,
+				"parent" : 16
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 96,
+				"parent" : 15
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 144,
+				"parent" : 18
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 505,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 141,
+				"parent" : 20
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 522,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 141,
+				"parent" : 22
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 578,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 2244,
+				"parent" : 24
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 144,
+				"parent" : 25
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 113,
+				"parent" : 27
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 144,
+				"parent" : 28
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 114,
+				"parent" : 27
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 144,
+				"parent" : 30
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 37,
+				"parent" : 32
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 144,
+				"parent" : 33
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 1084,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"id" : "zephyr_interface::@d36e55b69c1b90fb26b2",
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 5,
+			"fragment" : "-fuse-ld=bfd"
+		},
+		{
+			"backtrace" : 9,
+			"fragment" : "-mcpu=cortex-m4"
+		},
+		{
+			"backtrace" : 9,
+			"fragment" : "-mthumb"
+		},
+		{
+			"backtrace" : 9,
+			"fragment" : "-mabi=aapcs"
+		},
+		{
+			"backtrace" : 9,
+			"fragment" : "-mfp16-format=ieee"
+		},
+		{
+			"backtrace" : 11,
+			"fragment" : "-Wl,--gc-sections"
+		},
+		{
+			"backtrace" : 11,
+			"fragment" : "-Wl,--build-id=none"
+		},
+		{
+			"backtrace" : 14,
+			"fragment" : "-Wl,--sort-common=descending"
+		},
+		{
+			"backtrace" : 14,
+			"fragment" : "-Wl,--sort-section=alignment"
+		},
+		{
+			"backtrace" : 17,
+			"fragment" : "-Wl,-u,_OffsetAbsSyms"
+		},
+		{
+			"backtrace" : 19,
+			"fragment" : "-Wl,-u,_ConfigAbsSyms"
+		},
+		{
+			"backtrace" : 21,
+			"fragment" : "-nostdlib"
+		},
+		{
+			"backtrace" : 21,
+			"fragment" : "-static"
+		},
+		{
+			"backtrace" : 21,
+			"fragment" : "-Wl,-X"
+		},
+		{
+			"backtrace" : 21,
+			"fragment" : "-Wl,-N"
+		},
+		{
+			"backtrace" : 23,
+			"fragment" : "-Wl,--orphan-handling=warn"
+		},
+		{
+			"backtrace" : 26,
+			"fragment" : "-Wl,-no-pie"
+		},
+		{
+			"backtrace" : 29,
+			"fragment" : "-Wl,--undefined=_sw_isr_table"
+		},
+		{
+			"backtrace" : 31,
+			"fragment" : "-Wl,--undefined=_irq_vector_table"
+		},
+		{
+			"backtrace" : 34,
+			"fragment" : "-L\"/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/arm-zephyr-eabi\"/lib/thumb/v7e-m/nofp"
+		}
+	],
+	"name" : "zephyr_interface",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 35,
+			"id" : "syscall_list_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 35,
+			"id" : "driver_validation_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 35,
+			"id" : "kobj_types_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 35,
+			"id" : "device_api_ld_target::@d36e55b69c1b90fb26b2"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "zephyr",
+		"source" : "/home/luna/ikt104g26v/zephyr"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

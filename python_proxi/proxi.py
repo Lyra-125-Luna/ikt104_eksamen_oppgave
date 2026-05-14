@@ -1,6 +1,13 @@
-from flask import Flask, request, jsonify, Response
+from flask import Flask, request, Response
 import requests
 import time
+import ipaddress
+import json
+import logging
+
+# Hide Flask spam logs
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
 
 app = Flask(__name__)
 
@@ -20,7 +27,7 @@ IPGEOLOCATION_API_KEY = "d481d36b33e249d4abe04a1c77428884"
 
 
 # =========================
-# GET REAL CLIENT IP
+# GET CLIENT IP
 # =========================
 
 def get_client_ip():
@@ -34,14 +41,45 @@ def get_client_ip():
 
 
 # =========================
-# GET LOCATION FROM IP
+# CHECK PRIVATE IP
+# =========================
+
+def is_private_ip(ip):
+
+    try:
+        return ipaddress.ip_address(ip).is_private
+    except:
+        return False
+
+
+# =========================
+# GET PUBLIC IP
+# =========================
+
+def get_public_ip():
+
+    try:
+
+        response = requests.get(
+            "https://api.ipify.org?format=json",
+            timeout=5
+        )
+
+        return response.json().get("ip")
+
+    except:
+        return None
+
+
+# =========================
+# GET LOCATION
 # =========================
 
 def get_location_data(ip):
 
-    # Local testing fallback
-    if ip in ["127.0.0.1", "::1"]:
-        ip = ""
+    if not ip or ip in ["127.0.0.1", "::1"] or is_private_ip(ip):
+
+        ip = get_public_ip()
 
     response = requests.get(
         IPGEOLOCATION_API,
@@ -62,18 +100,26 @@ def get_location_data(ip):
 @app.route("/")
 def home():
 
-    return jsonify({
+    data = {
         "status": "running",
         "routes": [
             "/news",
-            "/weather",
             "/info"
         ]
-    })
+    }
+
+    return Response(
+        json.dumps(data),
+        status=200,
+        mimetype="application/json",
+        headers={
+            "Connection": "close"
+        }
+    )
 
 
 # =========================
-# NEWS PROXY
+# NEWS
 # =========================
 
 @app.route("/news")
@@ -92,69 +138,82 @@ def news():
             timeout=10
         )
 
+        news_data = response.json()
+
+        titles = []
+
+        #
+        # DEBUG PRINT
+        #
+        print("\nBBC API RESPONSE:")
+        print(json.dumps(news_data, indent=2))
+
+        #
+        # Try ALL possible locations
+        #
+
+        possible_lists = []
+
+        if isinstance(news_data, list):
+            possible_lists.append(news_data)
+
+        if isinstance(news_data, dict):
+
+            for key in news_data:
+
+                value = news_data[key]
+
+                if isinstance(value, list):
+                    possible_lists.append(value)
+
+        #
+        # Extract titles
+        #
+
+        for article_list in possible_lists:
+
+            for article in article_list:
+
+                if isinstance(article, dict):
+
+                    title = article.get("title")
+
+                    if title and title not in titles:
+
+                        titles.append(title)
+
+        #
+        # Return result
+        #
+
         return Response(
-            response.content,
-            status=response.status_code,
-            content_type=response.headers.get(
-                "Content-Type",
-                "application/json"
-            )
+            json.dumps({
+                "count": len(titles),
+                "titles": titles
+            }),
+            status=200,
+            mimetype="application/json",
+            headers={
+                "Connection": "close"
+            }
         )
 
     except Exception as e:
 
-        return jsonify({
-            "error": str(e)
-        }), 500
-
-
-# =========================
-# WEATHER
-# =========================
-
-@app.route("/weather")
-def weather():
-
-    try:
-
-        client_ip = get_client_ip()
-
-        # Get real location from IP
-        geo_data = get_location_data(client_ip)
-
-        lat = geo_data.get("latitude")
-        lon = geo_data.get("longitude")
-
-        if not lat or not lon:
-
-            return jsonify({
-                "error": "Could not determine location",
-                "geo_data": geo_data
-            }), 400
-
-        # Get weather
-        weather_response = requests.get(
-            OPENWEATHER_API,
-            params={
-                "lat": lat,
-                "lon": lon,
-                "appid": OPENWEATHER_API_KEY,
-                "units": "metric"
-            },
-            timeout=10
+        return Response(
+            json.dumps({
+                "error": str(e)
+            }),
+            status=500,
+            mimetype="application/json",
+            headers={
+                "Connection": "close"
+            }
         )
 
-        return jsonify(weather_response.json())
-
-    except Exception as e:
-
-        return jsonify({
-            "error": str(e)
-        }), 500
-
 
 # =========================
-# INFO ENDPOINT
+# INFO
 # =========================
 
 @app.route("/info")
@@ -164,7 +223,6 @@ def info():
 
         client_ip = get_client_ip()
 
-        # Get location info
         geo_data = get_location_data(client_ip)
 
         lat = geo_data.get("latitude")
@@ -173,7 +231,19 @@ def info():
         city = geo_data.get("city")
         country = geo_data.get("country_name")
 
-        # Get weather
+        if not lat or not lon:
+
+            return Response(
+                json.dumps({
+                    "error": "Could not determine location"
+                }),
+                status=400,
+                mimetype="application/json",
+                headers={
+                    "Connection": "close"
+                }
+            )
+
         weather_response = requests.get(
             OPENWEATHER_API,
             params={
@@ -187,12 +257,20 @@ def info():
 
         weather_data = weather_response.json()
 
-        weather_type = weather_data["weather"][0]["main"]
+        if "weather" not in weather_data:
 
-        temp = weather_data["main"]["temp"]
+            return Response(
+                json.dumps({
+                    "error": "Weather API failed"
+                }),
+                status=500,
+                mimetype="application/json",
+                headers={
+                    "Connection": "close"
+                }
+            )
 
-        # Final clean response
-        return jsonify({
+        data = {
 
             "unix_epoch": int(time.time()),
 
@@ -206,16 +284,32 @@ def info():
 
             "longitude": lon,
 
-            "weather": weather_type,
+            "weather": weather_data["weather"][0]["main"],
 
-            "temperature_celsius": temp
-        })
+            "temperature_celsius": weather_data["main"]["temp"]
+        }
+
+        return Response(
+            json.dumps(data),
+            status=200,
+            mimetype="application/json",
+            headers={
+                "Connection": "close"
+            }
+        )
 
     except Exception as e:
 
-        return jsonify({
-            "error": str(e)
-        }), 500
+        return Response(
+            json.dumps({
+                "error": str(e)
+            }),
+            status=500,
+            mimetype="application/json",
+            headers={
+                "Connection": "close"
+            }
+        )
 
 
 # =========================
@@ -224,8 +318,14 @@ def info():
 
 if __name__ == "__main__":
 
+    print("\nServer running on:")
+    print("http://127.0.0.1:5000")
+    print("http://0.0.0.0:5000")
+    print("http://10.130.51.252:5000\n")
+
     app.run(
         host="0.0.0.0",
         port=5000,
-        debug=True
+        debug=False,
+        threaded=False
     )

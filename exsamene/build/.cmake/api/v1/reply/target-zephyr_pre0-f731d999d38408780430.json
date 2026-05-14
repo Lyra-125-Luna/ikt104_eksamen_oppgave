@@ -1,0 +1,1821 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "zephyr/zephyr_pre0.elf"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"add_link_options",
+			"include",
+			"include_boilerplate",
+			"find_package",
+			"target_link_libraries",
+			"toolchain_ld_link_elf",
+			"zephyr_library_link_libraries",
+			"target_link_libraries_ifdef",
+			"target_ld_options",
+			"zephyr_ld_options",
+			"zephyr_link_libraries",
+			"zephyr_link_libraries_ifdef",
+			"toolchain_ld_force_undefined_symbols",
+			"zephyr_link_libraries_ifndef",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"/home/luna/ikt104g26v/zephyr/CMakeLists.txt",
+			"/home/luna/ikt104g26v/zephyr/cmake/linker/ld/gcc/linker_flags.cmake",
+			"/home/luna/ikt104g26v/zephyr/cmake/linker/ld/linker_flags.cmake",
+			"/home/luna/ikt104g26v/zephyr/cmake/target_toolchain_flags.cmake",
+			"/home/luna/ikt104g26v/zephyr/cmake/modules/kernel.cmake",
+			"/home/luna/ikt104g26v/zephyr/cmake/modules/zephyr_default.cmake",
+			"/home/luna/ikt104g26v/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake",
+			"CMakeLists.txt",
+			"/home/luna/ikt104g26v/zephyr/cmake/linker/ld/target.cmake",
+			"/home/luna/ikt104g26v/zephyr/cmake/modules/extensions.cmake",
+			"/home/luna/ikt104g26v/zephyr/arch/common/CMakeLists.txt",
+			"/home/luna/ikt104g26v/zephyr/lib/libc/newlib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1721,
+				"parent" : 0
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 5,
+				"parent" : 2
+			},
+			{
+				"file" : 6,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 6,
+				"line" : 97,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"file" : 5,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 5,
+				"line" : 140,
+				"parent" : 7
+			},
+			{
+				"file" : 4,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 153,
+				"parent" : 9
+			},
+			{
+				"file" : 3,
+				"parent" : 10
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 43,
+				"parent" : 11
+			},
+			{
+				"file" : 2,
+				"parent" : 12
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 59,
+				"parent" : 13
+			},
+			{
+				"file" : 1,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 14,
+				"parent" : 15
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 309,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 1722,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 8,
+				"line" : 120,
+				"parent" : 18
+			},
+			{
+				"file" : 10
+			},
+			{
+				"command" : 7,
+				"file" : 10,
+				"line" : 111,
+				"parent" : 20
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 544,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 474,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 9,
+				"line" : 164,
+				"parent" : 23
+			},
+			{
+				"command" : 8,
+				"file" : 9,
+				"line" : 2407,
+				"parent" : 24
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 2044,
+				"parent" : 25
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 479,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 9,
+				"line" : 164,
+				"parent" : 27
+			},
+			{
+				"command" : 8,
+				"file" : 9,
+				"line" : 2407,
+				"parent" : 28
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 2044,
+				"parent" : 29
+			},
+			{
+				"command" : 11,
+				"file" : 0,
+				"line" : 487,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 141,
+				"parent" : 31
+			},
+			{
+				"command" : 12,
+				"file" : 0,
+				"line" : 495,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 9,
+				"line" : 2092,
+				"parent" : 33
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 141,
+				"parent" : 34
+			},
+			{
+				"command" : 13,
+				"file" : 0,
+				"line" : 497,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 8,
+				"line" : 96,
+				"parent" : 36
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 144,
+				"parent" : 37
+			},
+			{
+				"command" : 11,
+				"file" : 8,
+				"line" : 96,
+				"parent" : 36
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 144,
+				"parent" : 39
+			},
+			{
+				"command" : 11,
+				"file" : 0,
+				"line" : 505,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 141,
+				"parent" : 41
+			},
+			{
+				"command" : 11,
+				"file" : 0,
+				"line" : 522,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 141,
+				"parent" : 43
+			},
+			{
+				"command" : 14,
+				"file" : 0,
+				"line" : 578,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 9,
+				"line" : 2244,
+				"parent" : 45
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 144,
+				"parent" : 46
+			},
+			{
+				"command" : 11,
+				"file" : 10,
+				"line" : 113,
+				"parent" : 20
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 144,
+				"parent" : 48
+			},
+			{
+				"command" : 11,
+				"file" : 10,
+				"line" : 114,
+				"parent" : 20
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 144,
+				"parent" : 50
+			},
+			{
+				"file" : 11
+			},
+			{
+				"command" : 11,
+				"file" : 11,
+				"line" : 37,
+				"parent" : 52
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 144,
+				"parent" : 53
+			},
+			{
+				"command" : 15,
+				"file" : 0,
+				"line" : 1084,
+				"parent" : 0
+			},
+			{
+				"command" : 15,
+				"file" : 0,
+				"line" : 1739,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 19,
+			"id" : "app::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "zephyr::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__common::@0b0b0cfd7a24e8ecfe11"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core::@717147f9117c30afc083"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core__cortex_m::@5e05c4b15b4c2575dfc6"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core__mpu::@1cd2394d16df6e39b2cf"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__libc__newlib::@2a4840c21e8f6debe566"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__libc__common::@4887e96c8898694998ea"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__eventfd::@538c1b551d0080036f5f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__c_lib_ext::@d2fc6285d0d5a514404d"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__options::@5845db2516faee11c195"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__net_buf::@a8897ac8a232bfffe74a"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__os__zvfs::@bb2ff6acf719978c110c"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__fs::@7f286e139d7b30278409"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__random::@cedacd108475236dd318"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net::@b94dba9cfbc9757578b5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__l2__offloaded_netdev::@206d02b2707eddeef632"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__l2__wifi::@e1ed95991fcf953bb94c"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__ip::@388a37ade1e77769cae4"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__lib__dhcpv4::@c446aef5f00a811ad0d0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__lib__http::@bf5d097b4654cc7455b0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__interrupt_controller::@4ccdf64818bf568667f1"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__adc::@ce47d09550ce14e88d48"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__clock_control::@03043f5596ae6e5fcffe"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__console::@39939278fdcee8c62e52"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__entropy::@e00872c89ca6c5bd3fc0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__gpio::@f8009383a952b2e6d5b0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__hwinfo::@d90cd5bb46acdd6e1da8"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__i2c::@9c05a3cf4c1cb78586d0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__pinctrl::@762029cc579c68d25071"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__reset::@1704dd2a32f33015c1a7"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__rtc::@9d82601905135d6d5f7b"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stmemsc::@baf84147f86b24c3559d"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__hts221::@185d48ec178e495b4bba"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lis3mdl::@376154891c398b952167"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lps22hb::@1255ab82d64a0bd05b35"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lsm6dsl::@077985e487baad6de562"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_temp::@a39f796942677320db69"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_vbat::@039c8ba43e78aab29c55"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_vref::@1b0595f6a624d41a2ac5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__vl53l0x::@9e8946f2a1dc6f4043c9"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__serial::@18e421c5ba74f72aaba5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__spi::@6089661dbc642732d5e9"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__timer::@d6d9b8697bc2d7d4441f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__watchdog::@2a89acdf19301cb6d806"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__wifi::@51137e7fdfeb0d5aa708"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "..__modules__hal__st::@628f21631bbc6d8ca4ff"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "..__modules__hal__stm32__stm32cube::@3f1a071cd0329d738cba"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "kernel::@84e783bf488a9f887759"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fno-strict-aliasing"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Os"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/include/generated/zephyr/autoconf.h"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fno-common"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-gdwarf-4"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-mcpu=cortex-m4"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-mabi=aapcs"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-mfp16-format=ieee"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "--sysroot=/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/arm-zephyr-eabi"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "/home/luna/ikt104g26v/zephyr/include/zephyr/toolchain/zephyr_stdint.h"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wformat"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wformat-security"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wno-format-zero-length"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wdouble-promotion"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wno-pointer-sign"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wpointer-arith"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wexpansion-to-defined"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Wno-unused-but-set-variable"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-Werror=implicit-int"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fno-pic"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fno-pie"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fno-asynchronous-unwind-tables"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fno-reorder-functions"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "--param=min-pagesize=0"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fno-defer-pop"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fmacro-prefix-map=/home/luna/ikt104g26v/zephyr/assignments/exsamen=CMAKE_SOURCE_DIR"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fmacro-prefix-map=/home/luna/ikt104g26v/zephyr=ZEPHYR_BASE"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fmacro-prefix-map=/home/luna/ikt104g26v=WEST_TOPDIR"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 19,
+					"fragment" : "-std=c99"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 19,
+					"define" : "CORE_CM4"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "KERNEL"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "K_HEAP_MEM_POOL_SIZE=16384"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "STM32L475xx"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "USE_FULL_LL_DRIVER"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "USE_HAL_DRIVER"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "ZVFS_OPEN_SIZE=10"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_ANSI_SOURCE"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_CLOCK_SELECTION=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_CPUTIME=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_C_SOURCE=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_MONOTONIC_CLOCK=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_MULTI_PROCESS=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_REALTIME_SIGNALS=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_THREADS=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_THREAD_SAFE_FUNCTIONS=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "_POSIX_TIMERS=200809L"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "__LINUX_ERRNO_EXTENSIONS__"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "__PROGRAM_START"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "__ZEPHYR__=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/include/generated/zephyr"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/include"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/include/generated"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/soc/st/stm32"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/lib/libc/newlib/include"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/lib/posix/c_lib_ext/getopt"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/include/zephyr/posix"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/lib/midi2/."
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/soc/st/stm32/common/."
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/drivers"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/soc/st/stm32/stm32l4x/."
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/subsys/net/ip"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/cmsis_6/CMSIS/Core/Include"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/modules/cmsis_6/."
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/microchip/include"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/st/sensor/vl53l0x/api/core/inc"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/zephyr/drivers/sensor/st/vl53l0x"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/st/sensor/stmemsc/hts221_STdC/driver"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/stm32/stm32cube/stm32l4xx/soc"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/stm32/stm32cube/stm32l4xx/drivers/include"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/stm32/stm32cube/common_ll/include"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/ti/mspm0/source/ti/devices/msp/."
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/ti/mspm0/source/ti/devices/msp/m0p"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/ti/mspm0/source/ti/devices/msp/peripherals"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/ti/mspm0/source/ti/devices/msp/peripherals/m0p"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/luna/ikt104g26v/modules/hal/ti/mspm0/source/ti/devices/msp/peripherals/m0p/sysctl"
+				},
+				{
+					"backtrace" : 19,
+					"isSystem" : true,
+					"path" : "/home/luna/ikt104g26v/zephyr/lib/libc/common/include"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 19,
+			"id" : "app::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "zephyr::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 55,
+			"id" : "syscall_list_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 55,
+			"id" : "driver_validation_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 55,
+			"id" : "kobj_types_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 55,
+			"id" : "device_api_ld_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 56,
+			"id" : "offsets::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 56,
+			"id" : "linker_zephyr_prebuilt_script_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__common::@0b0b0cfd7a24e8ecfe11"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "isr_tables::@0b0b0cfd7a24e8ecfe11"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core::@717147f9117c30afc083"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core__cortex_m::@5e05c4b15b4c2575dfc6"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core__mpu::@1cd2394d16df6e39b2cf"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__libc__newlib::@2a4840c21e8f6debe566"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__libc__common::@4887e96c8898694998ea"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__eventfd::@538c1b551d0080036f5f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__c_lib_ext::@d2fc6285d0d5a514404d"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__options::@5845db2516faee11c195"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__net_buf::@a8897ac8a232bfffe74a"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__os__zvfs::@bb2ff6acf719978c110c"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__fs::@7f286e139d7b30278409"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__random::@cedacd108475236dd318"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net::@b94dba9cfbc9757578b5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__l2__offloaded_netdev::@206d02b2707eddeef632"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__l2__wifi::@e1ed95991fcf953bb94c"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__ip::@388a37ade1e77769cae4"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__lib__dhcpv4::@c446aef5f00a811ad0d0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__lib__http::@bf5d097b4654cc7455b0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__interrupt_controller::@4ccdf64818bf568667f1"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__adc::@ce47d09550ce14e88d48"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__clock_control::@03043f5596ae6e5fcffe"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__console::@39939278fdcee8c62e52"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__entropy::@e00872c89ca6c5bd3fc0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__gpio::@f8009383a952b2e6d5b0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__hwinfo::@d90cd5bb46acdd6e1da8"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__i2c::@9c05a3cf4c1cb78586d0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__pinctrl::@762029cc579c68d25071"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__reset::@1704dd2a32f33015c1a7"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__rtc::@9d82601905135d6d5f7b"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stmemsc::@baf84147f86b24c3559d"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__hts221::@185d48ec178e495b4bba"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lis3mdl::@376154891c398b952167"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lps22hb::@1255ab82d64a0bd05b35"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lsm6dsl::@077985e487baad6de562"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_temp::@a39f796942677320db69"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_vbat::@039c8ba43e78aab29c55"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_vref::@1b0595f6a624d41a2ac5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__vl53l0x::@9e8946f2a1dc6f4043c9"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__serial::@18e421c5ba74f72aaba5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__spi::@6089661dbc642732d5e9"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__timer::@d6d9b8697bc2d7d4441f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__watchdog::@2a89acdf19301cb6d806"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__wifi::@51137e7fdfeb0d5aa708"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "..__modules__hal__st::@628f21631bbc6d8ca4ff"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "..__modules__hal__stm32__stm32cube::@3f1a071cd0329d738cba"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "kernel::@84e783bf488a9f887759"
+		}
+	],
+	"id" : "zephyr_pre0::@d36e55b69c1b90fb26b2",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"backtrace" : 16,
+				"fragment" : "-gdwarf-4",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 17,
+				"fragment" : "-Os",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/CMakeFiles/offsets.dir/./arch/arm/core/offsets/offsets.c.obj",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "-T",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/linker_zephyr_pre0.cmd",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "-Wl,-Map,/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/zephyr_pre0.map",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "-Wl,--whole-archive",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "app/libapp.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/libzephyr.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/arch/common/libarch__common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/arch/arch/arm/core/libarch__arm__core.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/lib/libc/newlib/liblib__libc__newlib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/lib/libc/common/liblib__libc__common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/lib/posix/eventfd/liblib__posix__eventfd.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/lib/posix/c_lib_ext/liblib__posix__c_lib_ext.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/lib/posix/options/liblib__posix__options.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/lib/net_buf/liblib__net_buf.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/lib/os/zvfs/liblib__os__zvfs.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/subsys/fs/libsubsys__fs.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/subsys/random/libsubsys__random.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/subsys/net/libsubsys__net.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/subsys/net/l2/offloaded_netdev/libsubsys__net__l2__offloaded_netdev.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/subsys/net/l2/wifi/libsubsys__net__l2__wifi.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/subsys/net/ip/libsubsys__net__ip.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/subsys/net/lib/dhcpv4/libsubsys__net__lib__dhcpv4.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/subsys/net/lib/http/libsubsys__net__lib__http.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/interrupt_controller/libdrivers__interrupt_controller.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/adc/libdrivers__adc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/clock_control/libdrivers__clock_control.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/console/libdrivers__console.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/entropy/libdrivers__entropy.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/gpio/libdrivers__gpio.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/hwinfo/libdrivers__hwinfo.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/i2c/libdrivers__i2c.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/pinctrl/libdrivers__pinctrl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/reset/libdrivers__reset.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/rtc/libdrivers__rtc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/stmemsc/libdrivers__sensor__st__stmemsc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/hts221/libdrivers__sensor__st__hts221.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/lis3mdl/libdrivers__sensor__st__lis3mdl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/lps22hb/libdrivers__sensor__st__lps22hb.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/lsm6dsl/libdrivers__sensor__st__lsm6dsl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/stm32_temp/libdrivers__sensor__st__stm32_temp.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/stm32_vbat/libdrivers__sensor__st__stm32_vbat.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/stm32_vref/libdrivers__sensor__st__stm32_vref.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/sensor/st/vl53l0x/libdrivers__sensor__st__vl53l0x.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/serial/libdrivers__serial.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/spi/libdrivers__spi.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/timer/libdrivers__timer.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/watchdog/libdrivers__watchdog.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/drivers/wifi/libdrivers__wifi.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "modules/hal_st/lib..__modules__hal__st.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "modules/hal_stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "-Wl,--no-whole-archive",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "zephyr/kernel/libkernel.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "-L/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 22,
+				"fragment" : "zephyr/arch/common/libisr_tables.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 26,
+				"fragment" : "-fuse-ld=bfd",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "-mcpu=cortex-m4",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "-mthumb",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "-mabi=aapcs",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "-mfp16-format=ieee",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "-Wl,--gc-sections",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "-Wl,--build-id=none",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 35,
+				"fragment" : "-Wl,--sort-common=descending",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 35,
+				"fragment" : "-Wl,--sort-section=alignment",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 38,
+				"fragment" : "-Wl,-u,_OffsetAbsSyms",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 40,
+				"fragment" : "-Wl,-u,_ConfigAbsSyms",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 42,
+				"fragment" : "-nostdlib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 42,
+				"fragment" : "-static",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 42,
+				"fragment" : "-Wl,-X",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 42,
+				"fragment" : "-Wl,-N",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 44,
+				"fragment" : "-Wl,--orphan-handling=warn",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 47,
+				"fragment" : "-Wl,-no-pie",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 49,
+				"fragment" : "-Wl,--undefined=_sw_isr_table",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 51,
+				"fragment" : "-Wl,--undefined=_irq_vector_table",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 54,
+				"fragment" : "-L\"/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/arm-zephyr-eabi\"/lib/thumb/v7e-m/nofp",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 19,
+			"fragment" : "-T"
+		},
+		{
+			"backtrace" : 19,
+			"fragment" : "/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/linker_zephyr_pre0.cmd"
+		},
+		{
+			"backtrace" : 19,
+			"fragment" : "-Wl,-Map,/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/zephyr_pre0.map"
+		},
+		{
+			"backtrace" : 19,
+			"fragment" : "-Wl,--whole-archive"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "app::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "zephyr::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__common::@0b0b0cfd7a24e8ecfe11"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core::@717147f9117c30afc083"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core__cortex_m::@5e05c4b15b4c2575dfc6"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "arch__arm__core__mpu::@1cd2394d16df6e39b2cf"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__libc__newlib::@2a4840c21e8f6debe566"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__libc__common::@4887e96c8898694998ea"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__eventfd::@538c1b551d0080036f5f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__c_lib_ext::@d2fc6285d0d5a514404d"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__posix__options::@5845db2516faee11c195"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__net_buf::@a8897ac8a232bfffe74a"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "lib__os__zvfs::@bb2ff6acf719978c110c"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__fs::@7f286e139d7b30278409"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__random::@cedacd108475236dd318"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net::@b94dba9cfbc9757578b5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__l2__offloaded_netdev::@206d02b2707eddeef632"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__l2__wifi::@e1ed95991fcf953bb94c"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__ip::@388a37ade1e77769cae4"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__lib__dhcpv4::@c446aef5f00a811ad0d0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "subsys__net__lib__http::@bf5d097b4654cc7455b0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__interrupt_controller::@4ccdf64818bf568667f1"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__adc::@ce47d09550ce14e88d48"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__clock_control::@03043f5596ae6e5fcffe"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__console::@39939278fdcee8c62e52"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__entropy::@e00872c89ca6c5bd3fc0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__gpio::@f8009383a952b2e6d5b0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__hwinfo::@d90cd5bb46acdd6e1da8"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__i2c::@9c05a3cf4c1cb78586d0"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__pinctrl::@762029cc579c68d25071"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__reset::@1704dd2a32f33015c1a7"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__rtc::@9d82601905135d6d5f7b"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stmemsc::@baf84147f86b24c3559d"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__hts221::@185d48ec178e495b4bba"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lis3mdl::@376154891c398b952167"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lps22hb::@1255ab82d64a0bd05b35"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__lsm6dsl::@077985e487baad6de562"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_temp::@a39f796942677320db69"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_vbat::@039c8ba43e78aab29c55"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__stm32_vref::@1b0595f6a624d41a2ac5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__sensor__st__vl53l0x::@9e8946f2a1dc6f4043c9"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__serial::@18e421c5ba74f72aaba5"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__spi::@6089661dbc642732d5e9"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__timer::@d6d9b8697bc2d7d4441f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__watchdog::@2a89acdf19301cb6d806"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "drivers__wifi::@51137e7fdfeb0d5aa708"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "..__modules__hal__st::@628f21631bbc6d8ca4ff"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "..__modules__hal__stm32__stm32cube::@3f1a071cd0329d738cba"
+		},
+		{
+			"backtrace" : 19,
+			"fragment" : "-Wl,--no-whole-archive"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "kernel::@84e783bf488a9f887759"
+		},
+		{
+			"backtrace" : 19,
+			"fragment" : "-L/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr"
+		}
+	],
+	"name" : "zephyr_pre0",
+	"nameOnDisk" : "zephyr_pre0.elf",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 56,
+			"id" : "offsets::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 56,
+			"id" : "linker_zephyr_prebuilt_script_target::@d36e55b69c1b90fb26b2"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "zephyr",
+		"source" : "/home/luna/ikt104g26v/zephyr"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/home/luna/ikt104g26v/zephyr/misc/empty_file.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -166,9 +166,6 @@
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/tracing/CMakeFiles/rebuild_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/usb/CMakeFiles/edit_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/usb/CMakeFiles/rebuild_cache.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/crc/CMakeFiles/subsys__crc.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/crc/CMakeFiles/edit_cache.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/crc/CMakeFiles/rebuild_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/CMakeFiles/subsys__net.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/CMakeFiles/edit_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/CMakeFiles/rebuild_cache.dir
@@ -194,9 +191,6 @@
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/dhcpv4/CMakeFiles/subsys__net__lib__dhcpv4.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/dhcpv4/CMakeFiles/edit_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/dhcpv4/CMakeFiles/rebuild_cache.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/dns/CMakeFiles/subsys__net__lib__dns.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/dns/CMakeFiles/edit_cache.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/dns/CMakeFiles/rebuild_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/http/CMakeFiles/subsys__net__lib__http.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/http/CMakeFiles/edit_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/http/CMakeFiles/rebuild_cache.dir
