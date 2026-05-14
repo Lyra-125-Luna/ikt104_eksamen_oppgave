@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/subsys/net/lib/utils",
+		"source" : "/home/luna/ikt104g26v/zephyr/subsys/net/lib/utils"
+	}
+}

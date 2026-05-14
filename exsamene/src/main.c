@@ -18,18 +18,34 @@
 
 
 // defines
-#define STACKSIZE 1024
-#define PRIORITY_HIGH 3
-#define PRIORITY 2
-#define PRIORITY_min 1
-#define STACKSIZE_NETWORK 4096
+#define STACKSIZE        2048
+#define PRIORITY_HIGH    3
+#define PRIORITY         2
+#define PRIORITY_min     1
+#define STACKSIZE_NETWORK 12288
+
 
 //trå
 K_THREAD_STACK_DEFINE(stack_1, STACKSIZE);
 K_THREAD_STACK_DEFINE(stack_2, STACKSIZE);
 K_THREAD_STACK_DEFINE(stack_3, STACKSIZE);
 
-K_THREAD_DEFINE(t4, STACKSIZE_NETWORK, network_config_thread_entry, NULL, NULL, NULL, PRIORITY, 0, 0);
+// nettworking:
+#define STACKSIZE_NETWORK 4096
+#define PRIORITY 2
+
+#define START_FIRST_REQEST 0
+#define START_SECOND_REQEST 0
+
+// WiFi
+K_THREAD_DEFINE(t_wifi, STACKSIZE_NETWORK,
+    wifi_connect, NULL, NULL, NULL, 1, 0, 0);
+
+// first reqest:
+K_THREAD_DEFINE(t_info_web, STACKSIZE_NETWORK, network_config_thread_entry, NULL, NULL, NULL, PRIORITY, 0, START_FIRST_REQEST);
+
+// secend reqest:
+K_THREAD_DEFINE(t_news_web, STACKSIZE_NETWORK, network_config_thread_entry_news, NULL, NULL, NULL, PRIORITY, 0, START_SECOND_REQEST);
 
 K_THREAD_STACK_DEFINE(alarm_stack, STACKSIZE);
 struct k_thread alarm_thread;
@@ -66,16 +82,11 @@ typedef struct
 
 mutex m;
 
-void funks()
-{
-
-}
-
 int main(void)
 {
 
 	//boot
-	k_thread_create(&t1, stack_1,STACKSIZE, boot, &m, NULL, NULL, PRIORITY, 0, K_NO_WAIT);
+	// k_thread_create(&t1, stack_1,STACKSIZE, boot, &m, NULL, NULL, PRIORITY, 0, K_NO_WAIT);
 
 	// Alarm
 	k_thread_create(&alarm_thread, alarm_stack, STACKSIZE,
@@ -90,8 +101,6 @@ int main(void)
 	//k_thread_create(&t2, stack_2,STACKSIZE, temp, &m, NULL, NULL, PRIORITY, 0, K_NO_WAIT);
 	//k_thread_create(&t3, stack_2,STACKSIZE, hum, &m, NULL, NULL, PRIORITY, 0, K_NO_WAIT);
 
-
-	// network
 
 	while (1)
 	{

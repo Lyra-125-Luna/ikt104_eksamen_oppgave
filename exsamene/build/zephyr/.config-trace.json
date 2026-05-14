@@ -31,10 +31,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/luna/ikt104g26v/zephyr/drivers/wifi/eswifi/Kconfig.eswifi",
-      8
+      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
+      44
     ]
   ],
   [
@@ -82,11 +82,11 @@
     "CONFIG_MAIN_STACK_SIZE",
     "y",
     "int",
-    "8192",
+    "4096",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      50
+      23
     ]
   ],
   [
@@ -157,11 +157,11 @@
     "CONFIG_NET_IPV6",
     "y",
     "bool",
-    "y",
-    "default",
+    "n",
+    "assign",
     [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      9
+      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
+      32
     ]
   ],
   [
@@ -675,7 +675,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      14
+      13
     ]
   ],
   [
@@ -736,7 +736,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      61
+      60
     ]
   ],
   [
@@ -806,18 +806,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      23
-    ]
-  ],
-  [
-    "CONFIG_LOG_PROCESS_THREAD_STACK_SIZE",
-    "y",
-    "int",
-    "2048",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.processing",
-      90
+      22
     ]
   ],
   [
@@ -1004,7 +993,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      13
+      12
     ]
   ],
   [
@@ -2847,22 +2836,22 @@
     "CONFIG_NET_TX_STACK_SIZE",
     "y",
     "int",
-    "2048",
+    "4096",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      51
+      55
     ]
   ],
   [
     "CONFIG_NET_RX_STACK_SIZE",
     "y",
     "int",
-    "2048",
+    "4096",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      52
+      56
     ]
   ],
   [
@@ -4280,11 +4269,11 @@
     "CONFIG_HEAP_MEM_POOL_SIZE",
     "y",
     "int",
-    "256",
+    "16384",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      22
+      17
     ]
   ],
   [
@@ -4310,9 +4299,10 @@
     "y",
     "bool",
     "y",
-    "select",
+    "default",
     [
-      "MPSC_PBUF"
+      "/home/luna/ikt104g26v/zephyr/kernel/Kconfig",
+      852
     ]
   ],
   [
@@ -6066,7 +6056,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      15
+      14
     ]
   ],
   [
@@ -6146,34 +6136,25 @@
     "CONFIG_RTC_ALARM",
     "y",
     "bool",
-    "y",
-    "assign",
-    [
-      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      16
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_RTC_UPDATE",
     "y",
     "bool",
-    "y",
-    "assign",
-    [
-      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      17
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_RTC_CALIBRATION",
     "y",
     "bool",
-    "y",
-    "assign",
-    [
-      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      18
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_RTC_STM32",
@@ -7259,8 +7240,8 @@
     "CONFIG_WIFI_LOG_LEVEL_INF",
     "y",
     "bool",
-    null,
-    "unset",
+    "y",
+    "assign",
     null
   ],
   [
@@ -7275,12 +7256,9 @@
     "CONFIG_WIFI_LOG_LEVEL_DEFAULT",
     "y",
     "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      9
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_WIFI_LOG_LEVEL",
@@ -7290,7 +7268,7 @@
     "default",
     [
       "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      55
+      53
     ]
   ],
   [
@@ -7665,11 +7643,11 @@
     "CONFIG_NEWLIB_LIBC_MIN_REQUIRED_HEAP_SIZE",
     "y",
     "int",
-    "8192",
-    "default",
+    "4096",
+    "assign",
     [
-      "/home/luna/ikt104g26v/zephyr/lib/libc/newlib/Kconfig",
-      27
+      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
+      18
     ]
   ],
   [
@@ -8073,22 +8051,12 @@
     "CONFIG_MPSC_PBUF",
     "y",
     "bool",
-    "y",
-    "select",
-    [
-      "LOG_MODE_DEFERRED && <choice LOG_MODE>"
-    ]
-  ],
-  [
-    "CONFIG_SPSC_PBUF",
-    "y",
-    "bool",
     null,
     "unset",
     null
   ],
   [
-    "CONFIG_MPSC_CLEAR_ALLOCATED",
+    "CONFIG_SPSC_PBUF",
     "y",
     "bool",
     null,
@@ -8429,7 +8397,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      38
+      37
     ]
   ],
   [
@@ -10004,9 +9972,9 @@
     "y",
     "bool",
     "y",
-    "select",
+    "imply",
     [
-      "NET_SOCKETS_SERVICE && NET_SOCKETS && NETWORKING"
+      "POSIX_API"
     ]
   ],
   [
@@ -10036,7 +10004,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      27
+      26
     ]
   ],
   [
@@ -10155,86 +10123,6 @@
   ],
   [
     "CONFIG_CRC",
-    "y",
-    "bool",
-    "y",
-    "select",
-    [
-      "DNS_RESOLVER && NET_NATIVE && NETWORKING"
-    ]
-  ],
-  [
-    "CONFIG_CRC_LOG_LEVEL_OFF",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_CRC_LOG_LEVEL_ERR",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_CRC_LOG_LEVEL_WRN",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_CRC_LOG_LEVEL_INF",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_CRC_LOG_LEVEL_DBG",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_CRC_LOG_LEVEL_DEFAULT",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
-  ],
-  [
-    "CONFIG_CRC_LOG_LEVEL",
-    "n",
-    "int",
-    "3",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.template.log_config",
-      36
-    ]
-  ],
-  [
-    "CONFIG_CRC_HW_HANDLER",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_CRC32_K_4_2_TABLE_256",
     "y",
     "bool",
     null,
@@ -11025,19 +10913,16 @@
     "CONFIG_LOG_MODE_DEFERRED",
     "y",
     "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.mode",
-      9
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_LOG_MODE_IMMEDIATE",
     "y",
     "bool",
-    null,
-    "unset",
+    "y",
+    "assign",
     null
   ],
   [
@@ -11081,17 +10966,6 @@
     null
   ],
   [
-    "CONFIG_LOG_FLUSH_SLEEP_US",
-    "y",
-    "int",
-    "10000",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.mode",
-      83
-    ]
-  ],
-  [
     "CONFIG_LOG_RUNTIME_FILTERING",
     "y",
     "bool",
@@ -11104,10 +10978,10 @@
     "y",
     "int",
     "3",
-    "default",
+    "assign",
     [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.filtering",
-      15
+      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
+      61
     ]
   ],
   [
@@ -11144,88 +11018,6 @@
     ]
   ],
   [
-    "CONFIG_LOG_MODE_OVERFLOW",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.processing",
-      19
-    ]
-  ],
-  [
-    "CONFIG_LOG_BLOCK_IN_THREAD",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_PROCESS_TRIGGER_THRESHOLD",
-    "y",
-    "int",
-    "10",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.processing",
-      44
-    ]
-  ],
-  [
-    "CONFIG_LOG_PROCESS_THREAD",
-    "y",
-    "bool",
-    "y",
-    "assign",
-    [
-      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      24
-    ]
-  ],
-  [
-    "CONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS",
-    "y",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.processing",
-      66
-    ]
-  ],
-  [
-    "CONFIG_LOG_PROCESS_THREAD_SLEEP_MS",
-    "y",
-    "int",
-    "1000",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.processing",
-      73
-    ]
-  ],
-  [
-    "CONFIG_LOG_PROCESS_THREAD_CUSTOM_PRIORITY",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_BUFFER_SIZE",
-    "y",
-    "int",
-    "1024",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.processing",
-      123
-    ]
-  ],
-  [
     "CONFIG_LOG_TRACE_SHORT_TIMESTAMP",
     "y",
     "bool",
@@ -11246,14 +11038,6 @@
   ],
   [
     "CONFIG_LOG_TIMESTAMP_USE_REALTIME",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_SPEED",
     "y",
     "bool",
     null,
@@ -11313,6 +11097,14 @@
   ],
   [
     "CONFIG_LOG_CUSTOM_FORMAT_SUPPORT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_LOG_IMMEDIATE_CLEAN_OUTPUT",
     "y",
     "bool",
     null,
@@ -11452,14 +11244,6 @@
     null
   ],
   [
-    "CONFIG_LOG_BACKEND_NET",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_LOG_BACKEND_SWO",
     "y",
     "bool",
@@ -11472,10 +11256,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/backends/Kconfig.uart",
-      7
+      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
+      69
     ]
   ],
   [
@@ -11505,11 +11289,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.template.log_format_config",
-      6
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_LOG_BACKEND_UART_OUTPUT_DICTIONARY",
@@ -11572,9 +11353,12 @@
     "CONFIG_LOG_ALWAYS_RUNTIME",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "default",
+    [
+      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.misc",
+      41
+    ]
   ],
   [
     "CONFIG_LOG_FMT_SECTION",
@@ -11599,25 +11383,6 @@
     null,
     "unset",
     null
-  ],
-  [
-    "CONFIG_LOG_MEM_UTILIZATION",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_FAILURE_REPORT_PERIOD",
-    "y",
-    "int",
-    "1000",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.misc",
-      115
-    ]
   ],
   [
     "CONFIG_LOG_RATELIMIT",
@@ -11710,7 +11475,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      32
+      30
     ]
   ],
   [
@@ -11990,17 +11755,6 @@
     ]
   ],
   [
-    "CONFIG_NET_NATIVE_IPV6",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig",
-      45
-    ]
-  ],
-  [
     "CONFIG_NET_NATIVE_IPV4",
     "n",
     "bool",
@@ -12089,287 +11843,6 @@
     ]
   ],
   [
-    "CONFIG_NET_IF_MAX_IPV6_COUNT",
-    "y",
-    "int",
-    "1",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      21
-    ]
-  ],
-  [
-    "CONFIG_NET_IF_UNICAST_IPV6_ADDR_COUNT",
-    "y",
-    "int",
-    "2",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      30
-    ]
-  ],
-  [
-    "CONFIG_NET_IF_MCAST_IPV6_ADDR_COUNT",
-    "y",
-    "int",
-    "3",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      35
-    ]
-  ],
-  [
-    "CONFIG_NET_IF_IPV6_PREFIX_COUNT",
-    "y",
-    "int",
-    "2",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      39
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_MTU",
-    "y",
-    "int",
-    "1280",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      45
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_PMTU",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_NET_INITIAL_HOP_LIMIT",
-    "y",
-    "int",
-    "64",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      65
-    ]
-  ],
-  [
-    "CONFIG_NET_INITIAL_MCAST_HOP_LIMIT",
-    "y",
-    "int",
-    "1",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      75
-    ]
-  ],
-  [
-    "CONFIG_NET_INITIAL_IPV6_MCAST_LOOP",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      88
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_MAX_NEIGHBORS",
-    "y",
-    "int",
-    "8",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      95
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_FRAGMENT",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_NET_IPV6_MLD",
-    "y",
-    "bool",
-    "y",
-    "select",
-    [
-      "NET_IPV6_ND && !NET_TEST && NET_IPV6_NBR_CACHE && NET_NATIVE_IPV6 && NET_IPV6 && !NET_RAW_MODE && NETWORKING"
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_NBR_CACHE",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      158
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_ND",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      167
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_DAD",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      175
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_NS_TIMEOUT",
-    "y",
-    "int",
-    "1000",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      183
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_RS_TIMEOUT",
-    "y",
-    "int",
-    "1",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      192
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_RA_RDNSS",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      201
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_IID_EUI_64",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig.ipv6",
-      208
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_IID_STABLE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_NET_IPV6_PE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_NET_6LO",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_NET_IPV6_LOG_LEVEL",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      50
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_ND_LOG_LEVEL",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      50
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_PE_LOG_LEVEL",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      50
-    ]
-  ],
-  [
-    "CONFIG_NET_ICMPV6_LOG_LEVEL",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      50
-    ]
-  ],
-  [
-    "CONFIG_NET_IPV6_NBR_CACHE_LOG_LEVEL",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      50
-    ]
-  ],
-  [
     "CONFIG_NET_IPV4",
     "y",
     "bool",
@@ -12377,7 +11850,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      33
+      31
     ]
   ],
   [
@@ -12561,14 +12034,6 @@
     ]
   ],
   [
-    "CONFIG_NET_IPV4_MAPPING_TO_IPV6",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_NET_TC_RX_COUNT",
     "y",
     "int",
@@ -12691,61 +12156,12 @@
     "CONFIG_NET_MAX_ROUTERS",
     "y",
     "int",
-    "2",
+    "1",
     "default",
     [
       "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig",
-      398
+      399
     ]
-  ],
-  [
-    "CONFIG_NET_ROUTE",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig",
-      410
-    ]
-  ],
-  [
-    "CONFIG_NET_ROUTING",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_NET_MAX_ROUTES",
-    "y",
-    "int",
-    "8",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig",
-      423
-    ]
-  ],
-  [
-    "CONFIG_NET_MAX_NEXTHOPS",
-    "y",
-    "int",
-    "8",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig",
-      430
-    ]
-  ],
-  [
-    "CONFIG_NET_ROUTE_MCAST",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
   ],
   [
     "CONFIG_NET_TCP",
@@ -12755,7 +12171,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      35
+      34
     ]
   ],
   [
@@ -12910,14 +12326,6 @@
     ]
   ],
   [
-    "CONFIG_NET_TCP_IPV6_ND_REACHABILITY_HINT",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_NET_TEST_PROTOCOL",
     "y",
     "bool",
@@ -12962,11 +12370,11 @@
     "CONFIG_NET_MAX_CONN",
     "y",
     "int",
-    "8",
+    "4",
     "default",
     [
       "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig",
-      509
+      510
     ]
   ],
   [
@@ -13157,44 +12565,44 @@
     "CONFIG_NET_PKT_RX_COUNT",
     "y",
     "int",
-    "10",
+    "32",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      55
+      51
     ]
   ],
   [
     "CONFIG_NET_PKT_TX_COUNT",
     "y",
     "int",
-    "10",
+    "16",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      56
+      53
     ]
   ],
   [
     "CONFIG_NET_BUF_RX_COUNT",
     "y",
     "int",
-    "20",
+    "32",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      57
+      52
     ]
   ],
   [
     "CONFIG_NET_BUF_TX_COUNT",
     "y",
     "int",
-    "20",
+    "16",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      58
+      54
     ]
   ],
   [
@@ -13220,11 +12628,11 @@
     "CONFIG_NET_BUF_DATA_SIZE",
     "y",
     "int",
-    "128",
-    "default",
+    "256",
+    "assign",
     [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/ip/Kconfig",
-      737
+      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
+      57
     ]
   ],
   [
@@ -13467,9 +12875,12 @@
     "CONFIG_NET_LOG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
+      76
+    ]
   ],
   [
     "CONFIG_NET_PKT_LOG_LEVEL",
@@ -13606,170 +13017,12 @@
     "CONFIG_DNS_RESOLVER",
     "y",
     "bool",
-    "y",
+    "n",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      39
+      38
     ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_AUTO_INIT",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      17
-    ]
-  ],
-  [
-    "CONFIG_MDNS_RESOLVER",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LLMNR_RESOLVER",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_ADDITIONAL_QUERIES",
-    "y",
-    "int",
-    "1",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      40
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_AI_MAX_ENTRIES",
-    "y",
-    "int",
-    "2",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      49
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_MAX_SERVERS",
-    "y",
-    "int",
-    "1",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      58
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_MAX_ANSWER_SIZE",
-    "y",
-    "int",
-    "512",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      67
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_MAX_QUERY_LEN",
-    "y",
-    "int",
-    "255",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      75
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_MAX_NAME_LEN",
-    "y",
-    "int",
-    "20",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      84
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_MAX_TEXT_LEN",
-    "y",
-    "int",
-    "64",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      94
-    ]
-  ],
-  [
-    "CONFIG_DNS_SERVER_IP_ADDRESSES",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_DNS_RECONFIGURE_CLEANUP",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_DNS_NUM_CONCUR_QUERIES",
-    "y",
-    "int",
-    "1",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      166
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_LOG_LEVEL",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      50
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_CACHE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_PACKET_FORWARDING",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
   ],
   [
     "CONFIG_MDNS_RESPONDER",
@@ -13794,39 +13047,6 @@
     null,
     "unset",
     null
-  ],
-  [
-    "CONFIG_DNS_SOCKET_DISPATCHER",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      385
-    ]
-  ],
-  [
-    "CONFIG_DNS_RESOLVER_ADDITIONAL_BUF_CTR",
-    "y",
-    "int",
-    "1",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dns/Kconfig",
-      394
-    ]
-  ],
-  [
-    "CONFIG_DNS_SOCKET_DISPATCHER_LOG_LEVEL",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/Kconfig.template.log_config.net",
-      50
-    ]
   ],
   [
     "CONFIG_NET_LATMON",
@@ -14008,8 +13228,7 @@
     "select",
     [
       "WIFI_ESWIFI && (DT_HAS_INVENTEK_ESWIFI_ENABLED || DT_HAS_INVENTEK_ESWIFI_UART_ENABLED) && WIFI",
-      "POSIX_NETWORKING && NETWORKING && POSIX_SYSTEM_INTERFACES",
-      "DNS_RESOLVER && NET_NATIVE && NETWORKING"
+      "POSIX_NETWORKING && NETWORKING && POSIX_SYSTEM_INTERFACES"
     ]
   ],
   [
@@ -14046,39 +13265,6 @@
     ]
   ],
   [
-    "CONFIG_NET_SOCKETS_DNS_TIMEOUT",
-    "y",
-    "int",
-    "2000",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/sockets/Kconfig",
-      44
-    ]
-  ],
-  [
-    "CONFIG_NET_SOCKETS_DNS_BACKOFF_INTERVAL",
-    "y",
-    "int",
-    "5000",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/sockets/Kconfig",
-      56
-    ]
-  ],
-  [
-    "CONFIG_HEAP_MEM_POOL_ADD_SIZE_GETADDRINFO",
-    "n",
-    "int",
-    "280",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/sockets/Kconfig",
-      76
-    ]
-  ],
-  [
     "CONFIG_NET_SOCKET_MAX_SEND_WAIT",
     "y",
     "int",
@@ -14093,12 +13279,9 @@
     "CONFIG_NET_SOCKETS_SERVICE",
     "y",
     "bool",
-    "y",
-    "select",
-    [
-      "DNS_RESOLVER && NET_NATIVE && NETWORKING",
-      "DNS_SOCKET_DISPATCHER && (DNS_RESOLVER || MDNS_RESPONDER) && NETWORKING"
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_ZVFS_OPEN_ADD_SIZE_SOCKETS_SERVICE",
@@ -14109,28 +13292,6 @@
     [
       "/home/luna/ikt104g26v/zephyr/subsys/net/lib/sockets/Kconfig",
       100
-    ]
-  ],
-  [
-    "CONFIG_NET_SOCKETS_SERVICE_THREAD_PRIO",
-    "y",
-    "int",
-    "15",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/sockets/Kconfig",
-      107
-    ]
-  ],
-  [
-    "CONFIG_NET_SOCKETS_SERVICE_STACK_SIZE",
-    "y",
-    "int",
-    "1200",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/sockets/Kconfig",
-      123
     ]
   ],
   [
@@ -14182,7 +13343,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      37
+      36
     ]
   ],
   [
@@ -14330,7 +13491,7 @@
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      34
+      33
     ]
   ],
   [
@@ -14391,34 +13552,12 @@
     null
   ],
   [
-    "CONFIG_NET_DHCPV4_OPTION_DNS_ADDRESS",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dhcpv4/Kconfig",
-      86
-    ]
-  ],
-  [
     "CONFIG_NET_DHCPV4_OPTION_PRINT_IGNORED",
     "y",
     "bool",
     null,
     "unset",
     null
-  ],
-  [
-    "CONFIG_NET_DHCPV4_DNS_SERVER_VIA_INTERFACE",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dhcpv4/Kconfig",
-      102
-    ]
   ],
   [
     "CONFIG_NET_DHCPV4_INIT_REBOOT",
@@ -14440,14 +13579,6 @@
     null
   ],
   [
-    "CONFIG_NET_DHCPV6",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_NET_DHCPV6_DUID_MAX_LEN",
     "y",
     "int",
@@ -14456,28 +13587,6 @@
     [
       "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dhcpv6/Kconfig",
       21
-    ]
-  ],
-  [
-    "CONFIG_NET_DHCPV6_OPTION_DNS_ADDRESS",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dhcpv6/Kconfig",
-      27
-    ]
-  ],
-  [
-    "CONFIG_NET_DHCPV6_DNS_SERVER_VIA_INTERFACE",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/net/lib/dhcpv6/Kconfig",
-      37
     ]
   ],
   [

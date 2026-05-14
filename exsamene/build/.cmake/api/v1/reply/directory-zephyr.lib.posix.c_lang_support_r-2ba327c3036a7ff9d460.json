@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/lib/posix/c_lang_support_r",
+		"source" : "/home/luna/ikt104g26v/zephyr/lib/posix/c_lang_support_r"
+	}
+}

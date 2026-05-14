@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/soc/soc/stm32l475xx/stm32l4x",
+		"source" : "/home/luna/ikt104g26v/zephyr/soc/st/stm32/stm32l4x"
+	}
+}

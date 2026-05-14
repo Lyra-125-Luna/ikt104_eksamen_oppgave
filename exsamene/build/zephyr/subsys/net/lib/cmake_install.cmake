@@ -54,11 +54,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/dns/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/net/lib/http/cmake_install.cmake")
 endif()
 
