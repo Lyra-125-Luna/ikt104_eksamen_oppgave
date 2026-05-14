@@ -164,33 +164,35 @@ static int http_request(const char *path)
  * MAIN NETWORK FUNCTION
  * ========================= */
 
-void network_config(void)
-{
-	k_mutex_lock(&http_mutex, K_FOREVER);
-    LOG_INF("Waiting for WiFi...");
-	LOG_INF("Slepping");
 
-    if (k_sem_take(&wifi_ready_sem, K_SECONDS(60)) != 0) {
-        LOG_ERR("Timed out waiting for WiFi");
-        return;
-    }
+	void network_config(void)
+	{
+		LOG_INF("Waiting for WiFi...");
 
-    while (1) {
-    	LOG_INF("Waiting for HTTP slot...");
-        k_mutex_lock(&http_mutex, K_FOREVER);
+		/* 1. Wait for WiFi FIRST without holding the mutex */
+		if (k_sem_take(&wifi_ready_sem, K_SECONDS(60)) != 0) {
+			LOG_ERR("Timed out waiting for WiFi");
+			return;
+		}
 
-        LOG_INF("Requesting /info");
-        int ret = http_request(HTTP_PATH);
-        if (ret < 0) {
-            LOG_ERR("HTTP request failed (%d)", ret);
-        }
+		while (1) {
+			LOG_INF("Waiting for HTTP slot...");
 
-		k_mutex_unlock(&http_mutex);
-    		LOG_INF("mutex unloce");
-    		LOG_INF("Slepping");
-		k_sleep(K_FOREVER);
-    }
-}
+			/* 2. Lock the mutex ONLY when starting the request */
+			k_mutex_lock(&http_mutex, K_FOREVER);
+
+			LOG_INF("Requesting /info");
+			http_request(HTTP_PATH);
+
+			/* 3. Unlock immediately after finishing */
+			k_mutex_unlock(&http_mutex);
+
+			LOG_INF("Sleeping before next update...");
+			// Use K_SECONDS, otherwise this thread never runs again!
+			k_sleep(K_SECONDS(30));
+		}
+	}
+
 
 /* =========================
  * THREAD ENTRY

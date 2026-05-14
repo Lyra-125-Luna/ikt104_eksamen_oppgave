@@ -144,7 +144,7 @@ LOG_INF("http_request() started: %s", path);
 		.events = ZSOCK_POLLIN,
 	    };
 
-	size_t limetReturm = 100;
+	size_t limetReturm = sizeof(shared_http_buf)/2;
 
 	while (total < limetReturm) {
 		int r = zsock_poll(&fds, 1, 8000);
@@ -203,10 +203,9 @@ LOG_INF("http_request() started: %s", path);
 
 void network_config_news(void)
 {
-	k_mutex_lock(&http_mutex, K_FOREVER);
 	LOG_INF("Waiting for WiFi...");
-	LOG_INF("Slepping");
 
+	/* 1. Wait for WiFi FIRST */
 	if (k_sem_take(&wifi_ready_sem, K_SECONDS(60)) != 0) {
 		LOG_ERR("Timed out waiting for WiFi");
 		return;
@@ -215,18 +214,17 @@ void network_config_news(void)
 	while (1) {
 		LOG_INF("Waiting for HTTP slot...");
 
-		LOG_INF("Requesting /info");
-		int ret = http_request(HTTP_PATH);
-		if (ret < 0) {
-			LOG_ERR("HTTP request failed (%d)", ret);
-		}
+		/* 2. Lock the mutex ONLY for the request */
+		k_mutex_lock(&http_mutex, K_FOREVER);
 
-		LOG_INF("mutex unloce");
+		LOG_INF("Requesting /news");
+		http_request(HTTP_PATH);
+
 		k_mutex_unlock(&http_mutex);
 
-		LOG_INF("Slepping");
+		printk("\n");
+		LOG_INF("Sleeping...");
 		k_sleep(K_FOREVER);
-
 	}
 }
 
