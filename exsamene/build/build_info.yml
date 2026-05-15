@@ -53,6 +53,6 @@ cmake:
     zephyr-base: '/home/luna/ikt104g26v/zephyr'
 version: '0.1.0'
 west:
-  command: '/home/luna/ikt104g26v/.venv/bin/west build --cmake-only --build-dir /home/luna/ikt104g26v/zephyr/assignments/exsamen/build /home/luna/ikt104g26v/zephyr/assignments/exsamen -- -DCMAKE_MAKE_PROGRAM=/snap/clion/439/bin/ninja/linux/x64/ninja'
+  command: '/home/luna/ikt104g26v/.venv/bin/west build --build-dir /home/luna/ikt104g26v/zephyr/assignments/exsamen/build /home/luna/ikt104g26v/zephyr/assignments/exsamen'
   topdir: '/home/luna/ikt104g26v'
   version: '1.5.0'

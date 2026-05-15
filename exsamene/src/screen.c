@@ -10,6 +10,10 @@
 
 static rgb_lcd_1602_t lcd;
 
+/* Timeout for all info/news mutex locks — never block forever from the
+   screen thread, so a stuck network thread cannot freeze the display. */
+#define MUTEX_TIMEOUT_MS  200
+
 // ================================
 // LCD helper: write string
 // ================================
@@ -98,27 +102,34 @@ void screen_show_temp_hum(void)
     lcd_show(line1, line2);
 }
 
+/* --------------------------------
+ * Safe info snapshot helper.
+ * Tries to lock info_mutex with a timeout; on failure returns false
+ * and the caller shows "No data yet" without hanging.
+ * -------------------------------- */
+static bool get_info_snapshot(info_data_t *out)
+{
+    if (k_mutex_lock(&info_mutex, K_MSEC(MUTEX_TIMEOUT_MS)) != 0) {
+        return false;
+    }
+    *out = g_info;   /* struct copy under the lock */
+    k_mutex_unlock(&info_mutex);
+    return true;
+}
+
 // ================================
 // Screen: weather
 // ================================
 static void screen_show_weather(void)
 {
-    char weather[INFO_STR_LEN] = {0};
-    char temp[INFO_STR_LEN]    = {0};
-
-    k_mutex_lock(&info_mutex, K_FOREVER);
-    strncpy(weather, g_info.weather,     sizeof(weather) - 1);
-    strncpy(temp,    g_info.temperature, sizeof(temp) - 1);
-    k_mutex_unlock(&info_mutex);
-
-    if (weather[0] == '\0') {
+    info_data_t info = {0};
+    if (!get_info_snapshot(&info) || info.weather[0] == '\0') {
         lcd_show("Weather:", "No data yet");
         return;
     }
-
     char line2[17] = {0};
-    snprintf(line2, sizeof(line2), "%.13s C", temp);
-    lcd_show(weather, line2);
+    snprintf(line2, sizeof(line2), "%.13s C", info.temperature);
+    lcd_show(info.weather, line2);
 }
 
 // ================================
@@ -126,18 +137,12 @@ static void screen_show_weather(void)
 // ================================
 static void screen_show_epoch(void)
 {
-    char epoch[INFO_STR_LEN] = {0};
-
-    k_mutex_lock(&info_mutex, K_FOREVER);
-    strncpy(epoch, g_info.unix_epoch, sizeof(epoch) - 1);
-    k_mutex_unlock(&info_mutex);
-
-    if (epoch[0] == '\0') {
+    info_data_t info = {0};
+    if (!get_info_snapshot(&info) || info.unix_epoch[0] == '\0') {
         lcd_show("Unix epoch:", "No data yet");
         return;
     }
-
-    lcd_show("Unix epoch:", epoch);
+    lcd_show("Unix epoch:", info.unix_epoch);
 }
 
 // ================================
@@ -145,23 +150,15 @@ static void screen_show_epoch(void)
 // ================================
 static void screen_show_latlon(void)
 {
-    char lat[INFO_STR_LEN] = {0};
-    char lon[INFO_STR_LEN] = {0};
-
-    k_mutex_lock(&info_mutex, K_FOREVER);
-    strncpy(lat, g_info.latitude,  sizeof(lat) - 1);
-    strncpy(lon, g_info.longitude, sizeof(lon) - 1);
-    k_mutex_unlock(&info_mutex);
-
-    if (lat[0] == '\0') {
+    info_data_t info = {0};
+    if (!get_info_snapshot(&info) || info.latitude[0] == '\0') {
         lcd_show("Lat/Lon:", "No data yet");
         return;
     }
-
     char line1[17] = {0};
     char line2[17] = {0};
-    snprintf(line1, sizeof(line1), "Lat: %.11s", lat);
-    snprintf(line2, sizeof(line2), "Lon: %.11s", lon);
+    snprintf(line1, sizeof(line1), "Lat: %.11s", info.latitude);
+    snprintf(line2, sizeof(line2), "Lon: %.11s", info.longitude);
     lcd_show(line1, line2);
 }
 
@@ -170,18 +167,12 @@ static void screen_show_latlon(void)
 // ================================
 static void screen_show_city(void)
 {
-    char city[INFO_STR_LEN] = {0};
-
-    k_mutex_lock(&info_mutex, K_FOREVER);
-    strncpy(city, g_info.city, sizeof(city) - 1);
-    k_mutex_unlock(&info_mutex);
-
-    if (city[0] == '\0') {
+    info_data_t info = {0};
+    if (!get_info_snapshot(&info) || info.city[0] == '\0') {
         lcd_show("City:", "No data yet");
         return;
     }
-
-    lcd_show("City:", city);
+    lcd_show("City:", info.city);
 }
 
 // ================================
@@ -220,7 +211,7 @@ static void epoch_to_datetime(long epoch,
     *hour = (int)((epoch / 3600) % 24);
 
     long days_total = epoch / 86400L;
-    *wday = (int)((days_total + 4) % 7);   /* epoch day 0 = Thu = 4, shift to Sun=0 */
+    *wday = (int)((days_total + 4) % 7);
 
     long d = days_total;
     *year  = 1970;
@@ -250,13 +241,8 @@ static void epoch_to_datetime(long epoch,
 // ================================
 static void screen_show_datetime(void)
 {
-    char epoch_str[INFO_STR_LEN] = {0};
-
-    k_mutex_lock(&info_mutex, K_FOREVER);
-    strncpy(epoch_str, g_info.unix_epoch, sizeof(epoch_str) - 1);
-    k_mutex_unlock(&info_mutex);
-
-    if (epoch_str[0] == '\0') {
+    info_data_t info = {0};
+    if (!get_info_snapshot(&info) || info.unix_epoch[0] == '\0') {
         char line1[17] = {0};
         alarm_get_clock_text(line1, sizeof(line1));
         lcd_show(line1, "No date yet");
@@ -264,8 +250,8 @@ static void screen_show_datetime(void)
     }
 
     long epoch = 0;
-    for (int i = 0; epoch_str[i] >= '0' && epoch_str[i] <= '9'; i++) {
-        epoch = epoch * 10 + (long)(epoch_str[i] - '0');
+    for (int i = 0; info.unix_epoch[i] >= '0' && info.unix_epoch[i] <= '9'; i++) {
+        epoch = epoch * 10 + (long)(info.unix_epoch[i] - '0');
     }
 
     int year, month, day, hour, min, sec, wday;
@@ -276,28 +262,30 @@ static void screen_show_datetime(void)
     snprintf(line1, sizeof(line1), "%.3s %d %s",
              weekday_name(wday), day, month_name(month));
     snprintf(line2, sizeof(line2), "%02d:%02d:%02d", hour, min, sec);
-
     lcd_show(line1, line2);
 }
 
 // ================================
-// Screen: news titles — reads from g_news
+// Screen: news titles
 // ================================
+
+/* Static so the 10*80 = 800-byte snapshot never sits on the stack */
+static char news_snapshot[NEWS_MAX][NEWS_TITLE_LEN];
+
 static void screen_show_news(void)
 {
-    /* Snapshot count and titles under the mutex */
-    int   count = 0;
-    char  titles[NEWS_MAX][NEWS_TITLE_LEN];
+    int count = 0;
 
-    k_mutex_lock(&news_mutex, K_FOREVER);
-    if (g_news.ready) {
-        count = g_news.count;
-        for (int i = 0; i < count; i++) {
-            strncpy(titles[i], g_news.titles[i], NEWS_TITLE_LEN - 1);
-            titles[i][NEWS_TITLE_LEN - 1] = '\0';
+    if (k_mutex_lock(&news_mutex, K_MSEC(MUTEX_TIMEOUT_MS)) == 0) {
+        if (g_news.ready) {
+            count = g_news.count;
+            for (int i = 0; i < count; i++) {
+                strncpy(news_snapshot[i], g_news.titles[i], NEWS_TITLE_LEN - 1);
+                news_snapshot[i][NEWS_TITLE_LEN - 1] = '\0';
+            }
         }
+        k_mutex_unlock(&news_mutex);
     }
-    k_mutex_unlock(&news_mutex);
 
     if (count == 0) {
         lcd_show("News:", "No data yet");
@@ -310,15 +298,12 @@ static void screen_show_news(void)
         char line2[17] = {0};
 
         snprintf(line1, sizeof(line1), "News %d/%d", i + 1, count);
-
-        /* First 16 chars of title */
-        snprintf(line2, sizeof(line2), "%.16s", titles[i]);
+        snprintf(line2, sizeof(line2), "%.16s", news_snapshot[i]);
         lcd_show(line1, line2);
         k_sleep(K_SECONDS(3));
 
-        /* Second slide if title longer than 16 chars */
-        if ((int)strlen(titles[i]) > 16) {
-            snprintf(line2, sizeof(line2), "%.16s", titles[i] + 16);
+        if ((int)strlen(news_snapshot[i]) > 16) {
+            snprintf(line2, sizeof(line2), "%.16s", news_snapshot[i] + 16);
             lcd_show(line1, line2);
             k_sleep(K_SECONDS(2));
         }
@@ -337,35 +322,27 @@ void screen_thread_entry(void *arg1, void *arg2, void *arg3)
     boot();
 
     while (1) {
-        /* a) Alarm: clock + status (~3 s) */
         screen_show_alarm();
-        k_sleep(K_SECONDS(3));
+        k_sleep(K_SECONDS(2));
 
-        /* b) Temperature + humidity (~3 s) */
         screen_show_temp_hum();
-        k_sleep(K_SECONDS(3));
+        k_sleep(K_SECONDS(2));
 
-        /* c) News titles (~3 s each) */
-        screen_show_news();
+        // screen_show_news();
 
-        /* d) Weather (~3 s) */
         screen_show_weather();
-        k_sleep(K_SECONDS(3));
+        k_sleep(K_SECONDS(2));
 
-        /* e) Unix epoch (~2 s) */
         screen_show_epoch();
         k_sleep(K_SECONDS(2));
 
-        /* f) Lat / Lon (~2 s) */
         screen_show_latlon();
         k_sleep(K_SECONDS(2));
 
-        /* g) City (~2 s) */
         screen_show_city();
         k_sleep(K_SECONDS(2));
 
-        /* h) Date + time (~3 s) */
         screen_show_datetime();
-        k_sleep(K_SECONDS(3));
+        k_sleep(K_SECONDS(2));
     }
 }

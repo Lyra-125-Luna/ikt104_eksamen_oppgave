@@ -98,9 +98,6 @@ CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=
 
-//Enable colored diagnostics throughout.
-CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
-
 //CXX compiler
 CMAKE_CXX_COMPILER:STRING=/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++
 
@@ -193,8 +190,8 @@ CMAKE_GDB_NO_PY:FILEPATH=/home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-ze
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
-//No help, variable specified on the command line.
-CMAKE_MAKE_PROGRAM:UNINITIALIZED=/snap/clion/439/bin/ninja/linux/x64/ninja
+//Program used to build from build.ninja files.
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/ninja
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -539,6 +536,8 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/luna/ikt104g26v/zephyr/assignments/exsamen
 //Name of CMakeLists files to read
 CMAKE_LIST_FILE_NAME:INTERNAL=CMakeLists.txt
+//ADVANCED property for variable: CMAKE_MAKE_PROGRAM
+CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
 CMAKE_MODULE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_DEBUG
