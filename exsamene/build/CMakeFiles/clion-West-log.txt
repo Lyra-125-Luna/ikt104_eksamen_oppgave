@@ -1,14 +1,17 @@
 west build --cmake-only --build-dir /home/luna/ikt104g26v/zephyr/assignments/exsamen/build /home/luna/ikt104g26v/zephyr/assignments/exsamen -- -DCMAKE_MAKE_PROGRAM=/snap/clion/439/bin/ninja/linux/x64/ninja
 -- west build: generating a build system
-Loading Zephyr default modules (Zephyr base (cached)).
+Loading Zephyr default modules (Zephyr base).
 -- Application: /home/luna/ikt104g26v/zephyr/assignments/exsamen
 -- CMake version: 4.2.2
+-- Found Python3: /home/luna/ikt104g26v/.venv/bin/python3 (found suitable version "3.13.7", minimum required is "3.10") found components: Interpreter
 -- Cache files will be written to: /home/luna/.cache/zephyr
 -- Zephyr version: 4.3.0 (/home/luna/ikt104g26v/zephyr)
 -- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
 -- Board: disco_l475_iot1, qualifiers: stm32l475xx
+-- ZEPHYR_TOOLCHAIN_VARIANT not set, trying to locate Zephyr SDK
 -- Found host-tools: zephyr 0.17.4 (/home/luna/zephyr-sdk-0.17.4)
 -- Found toolchain: zephyr 0.17.4 (/home/luna/zephyr-sdk-0.17.4)
+-- Found Dtc: /home/luna/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/dtc (found suitable version "1.7.0", minimum required is "1.4.6")
 -- Found BOARD.dts: /home/luna/ikt104g26v/zephyr/boards/st/disco_l475_iot1/disco_l475_iot1.dts
 -- Generated zephyr.dts: /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/zephyr.dts
 -- Generated pickled edt: /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/edt.pickle
@@ -25,11 +28,29 @@ the manual might be helpful too.
 
 
 warning: LOG_PROCESS_THREAD (defined at subsys/logging/Kconfig.processing:52) was assigned the value
-'y' but got the value 'n'. Check these unsatisfied dependencies: LOG_MODE_DEFERRED (=n). See
+'y' but got the value 'n'. Check these unsatisfied dependencies: LOG_MODE_DEFERRED (=n),
+(!LOG_MODE_MINIMAL) (=n). See
 http://docs.zephyrproject.org/latest/kconfig.html#CONFIG_LOG_PROCESS_THREAD and/or look up
 LOG_PROCESS_THREAD in the menuconfig/guiconfig interface. The Application Development Primer,
 Setting Configuration Values, and Kconfig - Tips and Best Practices sections of the manual might be
 helpful too.
+
+
+warning: LOG_BUFFER_SIZE (defined at subsys/logging/Kconfig.processing:121) was assigned the value
+'512' but got the value ''. Check these unsatisfied dependencies: LOG_MODE_DEFERRED (=n),
+(!LOG_MODE_MINIMAL) (=n). See
+http://docs.zephyrproject.org/latest/kconfig.html#CONFIG_LOG_BUFFER_SIZE and/or look up
+LOG_BUFFER_SIZE in the menuconfig/guiconfig interface. The Application Development Primer, Setting
+Configuration Values, and Kconfig - Tips and Best Practices sections of the manual might be helpful
+too.
+
+
+warning: LOG_BACKEND_UART (defined at subsys/logging/backends/Kconfig.uart:4) was assigned the value
+'y' but got the value 'n'. Check these unsatisfied dependencies: (!LOG_MODE_MINIMAL) (=n). See
+http://docs.zephyrproject.org/latest/kconfig.html#CONFIG_LOG_BACKEND_UART and/or look up
+LOG_BACKEND_UART in the menuconfig/guiconfig interface. The Application Development Primer, Setting
+Configuration Values, and Kconfig - Tips and Best Practices sections of the manual might be helpful
+too.
 
 
 warning: DNS_RESOLVER_MAX_SERVERS (defined at subsys/net/lib/dns/Kconfig:55) was assigned the value
@@ -39,17 +60,31 @@ DNS_RESOLVER_MAX_SERVERS in the menuconfig/guiconfig interface. The Application 
 Setting Configuration Values, and Kconfig - Tips and Best Practices sections of the manual might be
 helpful too.
 
+
+warning: The choice symbol LOG_BACKEND_UART_OUTPUT_TEXT (defined at
+subsys/logging/Kconfig.template.log_format_config:8) was selected (set =y), but no symbol ended up
+as the choice selection. See
+http://docs.zephyrproject.org/latest/kconfig.html#CONFIG_LOG_BACKEND_UART_OUTPUT_TEXT and/or look up
+LOG_BACKEND_UART_OUTPUT_TEXT in the menuconfig/guiconfig interface. The Application Development
+Primer, Setting Configuration Values, and Kconfig - Tips and Best Practices sections of the manual
+might be helpful too.
+
 Parsing /home/luna/ikt104g26v/zephyr/Kconfig
 Loaded configuration '/home/luna/ikt104g26v/zephyr/boards/st/disco_l475_iot1/disco_l475_iot1_defconfig'
 Merged configuration '/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf'
 Configuration saved to '/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/.config'
 Kconfig header saved to '/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/include/generated/zephyr/autoconf.h'
+-- Found GnuLd: /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/arm-zephyr-eabi/bin/ld.bfd (found version "2.38")
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/luna/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
 -- Using ccache: /usr/bin/ccache
 -- Found gen_kobject_list: /home/luna/ikt104g26v/zephyr/scripts/build/gen_kobject_list.py
 CMake Warning at /home/luna/ikt104g26v/zephyr/CMakeLists.txt:2356 (message):
   __ASSERT() statements are globally ENABLED
 
 
--- Configuring done (3.9s)
--- Generating done (0.2s)
+-- Configuring done (6.7s)
+-- Generating done (0.4s)
 -- Build files have been written to: /home/luna/ikt104g26v/zephyr/assignments/exsamen/build

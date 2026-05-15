@@ -1,22 +1,31 @@
 #include "alarm.h"
 
 #include <stdio.h>
+#include <stdbool.h>
 #include <zephyr/kernel.h>
 #include <zephyr/sys/printk.h>
-#include <stdbool.h>
+#include <zephyr/drivers/gpio.h>
 
 // ================================
 // Alarm configuration
 // ================================
 
-// bytt tilbake til 600
+// 20 for testing. Change to 600 before final delivery.
 #define ALARM_AUTO_MUTE_SECONDS 20
 #define SNOOZE_SECONDS 300
 
-// Test alarm: går av etter 30 sekunder
 #define DEFAULT_ALARM_HOUR 0
 #define DEFAULT_ALARM_MINUTE 0
-#define DEFAULT_ALARM_SECOND 30
+#define DEFAULT_ALARM_SECOND 3
+
+// ================================
+// GPIO pins
+// ================================
+
+#define SNOOZE_PIN 6   // PA6 / D12
+#define MUTE_PIN 7     // PA7 / D11
+#define ENABLE_PIN 1   // PB1 / D6
+#define SPEAKER_PIN 0  // PB0 / D3
 
 // ================================
 // Clock state
@@ -42,7 +51,18 @@ static int active_seconds = 0;
 static int snooze_seconds_left = 0;
 
 // ================================
-// Internal clock update
+// GPIO state
+// ================================
+
+static const struct device *gpioa;
+static const struct device *gpiob;
+
+static int last_snooze = 1;
+static int last_mute = 1;
+static int last_enable = 1;
+
+// ================================
+// Clock update
 // ================================
 
 static void update_clock(void)
@@ -65,7 +85,7 @@ static void update_clock(void)
 }
 
 // ================================
-// Alarm trigger check
+// Alarm check
 // ================================
 
 static void check_alarm_time(void)
@@ -86,7 +106,7 @@ static void check_alarm_time(void)
 }
 
 // ================================
-// Snooze countdown
+// Snooze update
 // ================================
 
 static void update_snooze(void)
@@ -107,7 +127,7 @@ static void update_snooze(void)
 }
 
 // ================================
-// Auto mute after 10 minutes
+// Auto mute
 // ================================
 
 static void update_auto_mute(void)
@@ -127,18 +147,83 @@ static void update_auto_mute(void)
 }
 
 // ================================
-// Placeholder for speaker/buzzer
+// Speaker / piezo sound
 // ================================
 
 static void update_speaker(void)
 {
+    if (gpiob == NULL) {
+        return;
+    }
+
     if (alarm_active) {
-        printk("BEEP BEEP BEEP\n");
+        for (int i = 0; i < 200; i++) {
+            gpio_pin_set(gpiob, SPEAKER_PIN, 1);
+            k_sleep(K_USEC(250));
+            gpio_pin_set(gpiob, SPEAKER_PIN, 0);
+            k_sleep(K_USEC(250));
+        }
+    } else {
+        gpio_pin_set(gpiob, SPEAKER_PIN, 0);
     }
 }
 
 // ================================
-// Public alarm thread
+// GPIO init
+// ================================
+
+void alarm_gpio_init(void)
+{
+    gpioa = DEVICE_DT_GET(DT_NODELABEL(gpioa));
+    gpiob = DEVICE_DT_GET(DT_NODELABEL(gpiob));
+
+    if (!device_is_ready(gpioa) || !device_is_ready(gpiob)) {
+        printk("GPIO not ready\n");
+        return;
+    }
+
+    gpio_pin_configure(gpioa, SNOOZE_PIN, GPIO_INPUT | GPIO_PULL_UP);
+    gpio_pin_configure(gpioa, MUTE_PIN, GPIO_INPUT | GPIO_PULL_UP);
+    gpio_pin_configure(gpiob, ENABLE_PIN, GPIO_INPUT | GPIO_PULL_UP);
+
+    gpio_pin_configure(gpiob, SPEAKER_PIN, GPIO_OUTPUT_INACTIVE);
+
+    printk("Alarm GPIO ready\n");
+}
+
+// ================================
+// Button check
+// ================================
+
+void alarm_check_buttons(void)
+{
+    if (gpioa == NULL || gpiob == NULL) {
+        return;
+    }
+
+    int snooze_now = gpio_pin_get(gpioa, SNOOZE_PIN);
+    int mute_now = gpio_pin_get(gpioa, MUTE_PIN);
+    int enable_now = gpio_pin_get(gpiob, ENABLE_PIN);
+
+    if (snooze_now == 0 && last_snooze == 1) {
+        alarm_snooze();
+    }
+
+    if (mute_now == 0 && last_mute == 1) {
+        alarm_mute();
+    }
+
+    if (enable_now == 0 && last_enable == 1) {
+        alarm_toggle_enabled();
+    }
+
+    last_snooze = snooze_now;
+    last_mute = mute_now;
+    last_enable = enable_now;
+}
+
+// ================================
+// Alarm thread
 // ================================
 
 void alarm_thread_entry(void *arg1, void *arg2, void *arg3)
@@ -149,20 +234,22 @@ void alarm_thread_entry(void *arg1, void *arg2, void *arg3)
 
     printk("Alarm thread started\n");
 
+    alarm_gpio_init();
+
     while (1) {
         update_clock();
+        alarm_check_buttons();
         check_alarm_time();
         update_snooze();
         update_auto_mute();
         update_speaker();
 
-        printk("Clock: %02d:%02d:%02d | Alarm: %02d:%02d:%02d | Enabled: %d | Active: %d | Snoozed: %d\n",
+        printk("Clock: %02d:%02d:%02d | Alarm: %02d:%02d | Enabled: %d | Active: %d | Snoozed: %d\n",
                current_hour,
                current_minute,
                current_second,
                alarm_hour,
                alarm_minute,
-               alarm_second,
                alarm_enabled,
                alarm_active,
                alarm_snoozed);
@@ -172,9 +259,9 @@ void alarm_thread_entry(void *arg1, void *arg2, void *arg3)
 }
 
 // ================================
-// Alarm control functions
-// These will be connected to buttons later
+// Alarm control: snooze
 // ================================
+
 void alarm_snooze(void)
 {
     if (alarm_active) {
@@ -186,6 +273,10 @@ void alarm_snooze(void)
         printk("Alarm snoozed\n");
     }
 }
+
+// ================================
+// Alarm control: mute
+// ================================
 
 void alarm_mute(void)
 {
@@ -199,6 +290,10 @@ void alarm_mute(void)
     }
 }
 
+// ================================
+// Alarm control: enable / disable
+// ================================
+
 void alarm_toggle_enabled(void)
 {
     alarm_enabled = !alarm_enabled;
@@ -206,10 +301,28 @@ void alarm_toggle_enabled(void)
     if (!alarm_enabled) {
         alarm_active = false;
         alarm_snoozed = false;
+        active_seconds = 0;
+        snooze_seconds_left = 0;
     }
 
     printk("Alarm enabled: %d\n", alarm_enabled);
 }
+
+// ================================
+// LCD text: clock line
+// ================================
+
+void alarm_get_clock_text(char *buffer, int buffer_size)
+{
+    snprintf(buffer, buffer_size, "%02d:%02d:%02d",
+             current_hour,
+             current_minute,
+             current_second);
+}
+
+// ================================
+// LCD text: alarm status line
+// ================================
 
 void alarm_get_status_text(char *buffer, int buffer_size)
 {

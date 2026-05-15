@@ -21,19 +21,19 @@ static double humidity = 0.0;
 
 void tem_hum_init(void)
 {
-    sensor = DEVICE_DT_GET_ANY(st_hts221);
+	sensor = DEVICE_DT_GET_ANY(st_hts221);
 
-    if (sensor == NULL) {
-        printk("HTS221 sensor not found\n");
-        return;
-    }
+	if (sensor == NULL) {
+		printk("HTS221 sensor not found\n");
+		return;
+	}
 
-    if (!device_is_ready(sensor)) {
-        printk("HTS221 sensor not ready\n");
-        return;
-    }
+	if (!device_is_ready(sensor)) {
+		printk("HTS221 sensor not ready\n");
+		return;
+	}
 
-    printk("HTS221 sensor ready\n");
+	printk("HTS221 sensor ready\n");
 }
 
 // ================================
@@ -42,27 +42,27 @@ void tem_hum_init(void)
 
 void tem_hum_update(void)
 {
-    struct sensor_value temp;
-    struct sensor_value hum;
+	struct sensor_value temp;
+	struct sensor_value hum;
 
-    if (!device_is_ready(sensor)) {
-        printk("Sensor not ready\n");
-        return;
-    }
+	if (!device_is_ready(sensor)) {
+		printk("Sensor not ready\n");
+		return;
+	}
 
-    sensor_sample_fetch(sensor);
+	sensor_sample_fetch(sensor);
 
-    sensor_channel_get(sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
-    sensor_channel_get(sensor, SENSOR_CHAN_HUMIDITY, &hum);
+	sensor_channel_get(sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
+	sensor_channel_get(sensor, SENSOR_CHAN_HUMIDITY, &hum);
 
-    temperature = sensor_value_to_double(&temp);
-    humidity = sensor_value_to_double(&hum);
+	temperature = sensor_value_to_double(&temp);
+	humidity = sensor_value_to_double(&hum);
 
-    printk("Temp: %d.%d C | Humidity: %d.%d %%\n",
-        (int)temperature,
-        (int)(temperature * 10) % 10,
-        (int)humidity,
-        (int)(humidity * 10) % 10);
+	printk("Temp: %d.%d C | Humidity: %d.%d %%\n",
+	    (int)temperature,
+	    (int)(temperature * 10) % 10,
+	    (int)humidity,
+	    (int)(humidity * 10) % 10);
 }
 
 // ================================
@@ -71,7 +71,7 @@ void tem_hum_update(void)
 
 double tem_hum_get_temp(void)
 {
-    return temperature;
+	return temperature;
 }
 
 // ================================
@@ -80,5 +80,5 @@ double tem_hum_get_temp(void)
 
 double tem_hum_get_hum(void)
 {
-    return humidity;
+	return humidity;
 }

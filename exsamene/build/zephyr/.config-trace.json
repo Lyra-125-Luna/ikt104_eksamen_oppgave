@@ -8233,6 +8233,14 @@
     null
   ],
   [
+    "CONFIG_CBPRINTF_STATIC_PACKAGE_CHECK_ALIGNMENT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_CBPRINTF_CONVERT_CHECK_PTR",
     "n",
     "bool",
@@ -10176,7 +10184,8 @@
     "y",
     "select",
     [
-      "BOOT_BANNER"
+      "BOOT_BANNER",
+      "LOG_MODE_MINIMAL && <choice LOG_MODE>"
     ]
   ],
   [
@@ -10921,16 +10930,16 @@
     "CONFIG_LOG_MODE_IMMEDIATE",
     "y",
     "bool",
-    "y",
-    "assign",
+    null,
+    "unset",
     null
   ],
   [
     "CONFIG_LOG_MODE_MINIMAL",
     "y",
     "bool",
-    null,
-    "unset",
+    "y",
+    "assign",
     null
   ],
   [
@@ -10959,14 +10968,6 @@
   ],
   [
     "CONFIG_LOG_MULTIDOMAIN",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_RUNTIME_FILTERING",
     "y",
     "bool",
     null,
@@ -11007,327 +11008,6 @@
     ]
   ],
   [
-    "CONFIG_LOG_PRINTK",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.processing",
-      10
-    ]
-  ],
-  [
-    "CONFIG_LOG_TRACE_SHORT_TIMESTAMP",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.processing",
-      152
-    ]
-  ],
-  [
-    "CONFIG_LOG_TIMESTAMP_64BIT",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_TIMESTAMP_USE_REALTIME",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_FUNC_NAME_PREFIX_ERR",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_FUNC_NAME_PREFIX_WRN",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_FUNC_NAME_PREFIX_INF",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_FUNC_NAME_PREFIX_DBG",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.formatting",
-      20
-    ]
-  ],
-  [
-    "CONFIG_LOG_MIPI_SYST_ENABLE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_THREAD_ID_PREFIX",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_CUSTOM_FORMAT_SUPPORT",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_IMMEDIATE_CLEAN_OUTPUT",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_BACKEND_SHOW_TIMESTAMP",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.formatting",
-      137
-    ]
-  ],
-  [
-    "CONFIG_LOG_BACKEND_SHOW_LEVEL",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.formatting",
-      143
-    ]
-  ],
-  [
-    "CONFIG_LOG_BACKEND_SHOW_COLOR",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.formatting",
-      150
-    ]
-  ],
-  [
-    "CONFIG_LOG_INFO_COLOR_GREEN",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_DBG_COLOR_BLUE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_TAG_MAX_LEN",
-    "y",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.formatting",
-      166
-    ]
-  ],
-  [
-    "CONFIG_LOG_BACKEND_SUPPORTS_FORMAT_TIMESTAMP",
-    "n",
-    "bool",
-    "y",
-    "select",
-    [
-      "LOG_BACKEND_UART && UART_CONSOLE && !LOG_FRONTEND_ONLY && !LOG_MODE_MINIMAL && LOG"
-    ]
-  ],
-  [
-    "CONFIG_LOG_BACKEND_FORMAT_TIMESTAMP",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.formatting",
-      187
-    ]
-  ],
-  [
-    "CONFIG_LOG_OUTPUT_FORMAT_TIME_TIMESTAMP",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.formatting",
-      194
-    ]
-  ],
-  [
-    "CONFIG_LOG_OUTPUT_FORMAT_DATE_TIMESTAMP",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_OUTPUT_FORMAT_ISO8601_TIMESTAMP",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_OUTPUT_FORMAT_LINUX_TIMESTAMP",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_OUTPUT_FORMAT_CUSTOM_TIMESTAMP",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_BACKEND_FS",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_BACKEND_SWO",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_BACKEND_UART",
-    "y",
-    "bool",
-    "y",
-    "assign",
-    [
-      "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
-      69
-    ]
-  ],
-  [
-    "CONFIG_LOG_BACKEND_UART_BUFFER_SIZE",
-    "y",
-    "int",
-    "1",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/backends/Kconfig.uart",
-      22
-    ]
-  ],
-  [
-    "CONFIG_LOG_BACKEND_UART_AUTOSTART",
-    "y",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/backends/Kconfig.uart",
-      33
-    ]
-  ],
-  [
-    "CONFIG_LOG_BACKEND_UART_OUTPUT_TEXT",
-    "y",
-    "bool",
-    "y",
-    "assign",
-    null
-  ],
-  [
-    "CONFIG_LOG_BACKEND_UART_OUTPUT_DICTIONARY",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_BACKEND_UART_OUTPUT_CUSTOM",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_LOG_BACKEND_UART_OUTPUT_DEFAULT",
-    "n",
-    "int",
-    "0",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.template.log_format_config",
-      42
-    ]
-  ],
-  [
-    "CONFIG_LOG_BACKEND_IPC_SERVICE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_LOG_USE_VLA",
     "y",
     "bool",
@@ -11353,12 +11033,9 @@
     "CONFIG_LOG_ALWAYS_RUNTIME",
     "y",
     "bool",
-    "y",
-    "default",
-    [
-      "/home/luna/ikt104g26v/zephyr/subsys/logging/Kconfig.misc",
-      41
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_LOG_FMT_SECTION",
@@ -11410,11 +11087,9 @@
     "CONFIG_LOG_OUTPUT",
     "y",
     "bool",
-    "y",
-    "select",
-    [
-      "LOG_BACKEND_UART_OUTPUT_TEXT && <choice LOG_BACKEND_UART_OUTPUT>"
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_MEM_ATTR",
@@ -12565,7 +12240,7 @@
     "CONFIG_NET_PKT_RX_COUNT",
     "y",
     "int",
-    "32",
+    "16",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",
@@ -12587,7 +12262,7 @@
     "CONFIG_NET_BUF_RX_COUNT",
     "y",
     "int",
-    "32",
+    "16",
     "assign",
     [
       "/home/luna/ikt104g26v/zephyr/assignments/exsamen/prj.conf",

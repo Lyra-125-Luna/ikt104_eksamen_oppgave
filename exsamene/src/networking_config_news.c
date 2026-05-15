@@ -1,12 +1,10 @@
 #include "network_config.h"
 
-#include <zephyr/posix/fcntl.h>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/net/socket.h>
 #include <string.h>
 #include <errno.h>
-
 
 LOG_MODULE_REGISTER(network_config_news, LOG_LEVEL_INF);
 
@@ -14,188 +12,208 @@ LOG_MODULE_REGISTER(network_config_news, LOG_LEVEL_INF);
 #define HTTP_PORT  5000
 #define HTTP_PATH  "/news"
 
-#define NEWS_ENOUGH_BYTES 2048
-
 /* =========================
- * PRINT TITLES
+ * SHARED NEWS DATA
  * ========================= */
 
-static void print_titles(const char *json)
+news_data_t    g_news     = {0};
+struct k_mutex news_mutex = Z_MUTEX_INITIALIZER(news_mutex);
+
+/* =========================
+ * OWN RECEIVE BUFFER
+ * Content-Length 3703 + ~186 header = 3889 bytes.
+ * 5120 gives comfortable headroom.
+ * Static globals — never on the stack.
+ * ========================= */
+
+#define NEWS_BUF_SIZE   5120
+#define NEWS_CHUNK_SIZE  256
+
+static uint8_t news_buf[NEWS_BUF_SIZE];
+static uint8_t news_chunk[NEWS_CHUNK_SIZE];
+
+/* =========================
+ * PARSE TITLES
+ * ========================= */
+
+static void parse_news_titles(const char *json)
 {
-	printk("=== NEWS TITLES ===\n");
+    k_mutex_lock(&news_mutex, K_FOREVER);
 
-	/* Store up to 20 unique titles (pointers + lengths for comparison) */
-#define MAX_TITLES 10
-#define MAX_TITLE_LEN 120
+    g_news.count = 0;
+    g_news.ready = false;
 
-	static char seen[MAX_TITLES][MAX_TITLE_LEN];
-	int seen_count = 0;
-	int printed = 0;
+    const char *pos = json;
 
-	const char *pos = json;
+    while (g_news.count < NEWS_MAX) {
+        pos = strstr(pos, "\"title\":");
+        if (pos == NULL) break;
 
-	while ((pos = strstr(pos, "\"title\":")) != NULL && printed < 10) {
-		pos += 8;
-		while (*pos == ' ' || *pos == '\t') pos++;
+        pos += 8;
+        while (*pos == ' ' || *pos == '\t') pos++;
 
-		if (strncmp(pos, "null", 4) == 0) {
-			pos += 4;
-			continue;
-		}
+        if (strncmp(pos, "null", 4) == 0) {
+            pos += 4;
+            continue;
+        }
 
-		if (*pos == '"') pos++;
+        if (*pos == '"') pos++;
 
-		/* Copy title into temp buffer */
-		char title[MAX_TITLE_LEN];
-		int i = 0;
-		const char *start = pos;
-		while (*pos && *pos != '"' && i < (int)sizeof(title) - 1) {
-			title[i++] = *pos++;
-		}
-		title[i] = '\0';
-		if (*pos == '"') pos++;
+        int i = 0;
+        while (*pos && *pos != '"' && i < NEWS_TITLE_LEN - 1) {
+            g_news.titles[g_news.count][i++] = *pos++;
+        }
+        g_news.titles[g_news.count][i] = '\0';
+        if (*pos == '"') pos++;
 
-		/* Check for duplicate */
-		bool duplicate = false;
-		for (int j = 0; j < seen_count; j++) {
-			if (strncmp(seen[j], title, MAX_TITLE_LEN) == 0) {
-				duplicate = true;
-				break;
-			}
-		}
+        if (i > 0) {
+            LOG_INF("title %d: %.60s", g_news.count + 1,
+                    g_news.titles[g_news.count]);
+            g_news.count++;
+        }
+    }
 
-		if (!duplicate) {
-			printk("%d. %s\n", ++printed, title);
-			if (seen_count < MAX_TITLES) {
-				strncpy(seen[seen_count++], title, MAX_TITLE_LEN - 1);
-			}
-		}
-	}
+    if (g_news.count > 0) {
+        g_news.ready = true;
+    }
 
-	printk("===================\n");
+    k_mutex_unlock(&news_mutex);
+
+    LOG_INF("Parsed %d news titles", g_news.count);
 }
 
 /* =========================
  * HTTP REQUEST
+ *
+ * KEY DESIGN: http_mutex is held only while connecting and sending.
+ * It is released BEFORE the recv loop so the /info thread is never
+ * blocked during the slow multi-packet download, which was causing
+ * the network stack to drop packets ("Cannot allocate rx packet").
  * ========================= */
 
 static int http_request(const char *path)
 {
-LOG_INF("http_request() started: %s", path);
+    LOG_INF("news http_request(): %s", path);
 
-	int sock;
-	int ret;
+    int sock;
+    int ret;
 
-	struct sockaddr_in addr = {0};
-	addr.sin_family = AF_INET;
-	addr.sin_port   = htons(HTTP_PORT);
+    struct sockaddr_in addr = {0};
+    addr.sin_family = AF_INET;
+    addr.sin_port   = htons(HTTP_PORT);
 
-	ret = net_addr_pton(AF_INET, HTTP_HOST, &addr.sin_addr);
-	if (ret < 0) {
-		LOG_ERR("Invalid IP address");
-		return -EINVAL;
-	}
+    ret = net_addr_pton(AF_INET, HTTP_HOST, &addr.sin_addr);
+    if (ret < 0) {
+        LOG_ERR("Invalid IP address");
+        return -EINVAL;
+    }
 
-	sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	if (sock < 0) {
-		LOG_ERR("Socket creation failed (%d)", errno);
-		return -errno;
-	}
+    /* --- MUTEX ON: connect + send only --- */
+    k_mutex_lock(&http_mutex, K_FOREVER);
 
-	//struct zsock_timeval tv = { .tv_sec = 3, .tv_usec = 0 };
-	//zsock_setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+    sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if (sock < 0) {
+        LOG_ERR("Socket creation failed (%d)", errno);
+        k_mutex_unlock(&http_mutex);
+        return -errno;
+    }
 
+    ret = connect(sock, (struct sockaddr *)&addr, sizeof(addr));
+    if (ret < 0) {
+        LOG_ERR("Connect failed (%d)", errno);
+        close(sock);
+        k_mutex_unlock(&http_mutex);
+        return -errno;
+    }
 
+    char request[256];
+    snprintk(request, sizeof(request),
+        "GET %s HTTP/1.0\r\n"
+        "Host: %s\r\n"
+        "Accept: application/json\r\n"
+        "Connection: close\r\n"
+        "\r\n",
+        path, HTTP_HOST);
 
-	ret = connect(sock, (struct sockaddr *)&addr, sizeof(addr));
-	if (ret < 0) {
-		LOG_ERR("Connect failed (%d)", errno);
-		close(sock);
-		return -errno;
-	}
+    ret = send(sock, request, strlen(request), 0);
+    if (ret < 0) {
+        LOG_ERR("Send failed (%d)", errno);
+        close(sock);
+        k_mutex_unlock(&http_mutex);
+        return -errno;
+    }
 
-	LOG_INF("Connected, sending raw HTTP GET");
+    /* --- MUTEX OFF: release before recv so /info thread can run --- */
+    k_mutex_unlock(&http_mutex);
 
-	char request[256];
-	snprintk(request, sizeof(request),
-	    "GET %s HTTP/1.0\r\n"
-	    "Host: %s\r\n"
-	    "Accept: application/json\r\n"
-	    "Connection: close\r\n"
-	    "\r\n",
-	    path, HTTP_HOST);
+    LOG_INF("Request sent, receiving (mutex released)");
 
-	ret = send(sock, request, strlen(request), 0);
-	if (ret < 0) {
-		LOG_ERR("Send failed (%d)", errno);
-		close(sock);
-		return -errno;
-	}
+    memset(news_buf, 0, sizeof(news_buf));
+    int total          = 0;
+    int content_length = -1;
 
+    struct zsock_pollfd fds = {
+        .fd     = sock,
+        .events = ZSOCK_POLLIN,
+    };
 
-	LOG_INF("Request sent, reading response");
+    while (total < (int)(sizeof(news_buf) - 1)) {
+        int r = zsock_poll(&fds, 1, 8000);
+        if (r == 0) {
+            LOG_WRN("poll timeout");
+            break;
+        }
+        if (r < 0 && !(fds.revents & ZSOCK_POLLIN)) {
+            LOG_WRN("poll error: errno=%d revents=0x%x", errno, fds.revents);
+            break;
+        }
 
-	memset(shared_http_buf, 0, sizeof(shared_http_buf));
-	int total = 0;
-	int content_length = -1;
+        int n = recv(sock, news_chunk, sizeof(news_chunk) - 1, 0);
+        if (n <= 0) break;
 
-	struct zsock_pollfd fds = {
-		.fd     = sock,
-		.events = ZSOCK_POLLIN,
-	    };
+        memcpy(news_buf + total, news_chunk, n);
+        total += n;
 
-	size_t limetReturm = sizeof(shared_http_buf)/2;
+        if (content_length < 0) {
+            char *cl      = strstr((char *)news_buf, "Content-Length: ");
+            char *hdr_end = strstr((char *)news_buf, "\r\n\r\n");
+            if (cl && hdr_end) {
+                content_length = atoi(cl + 16);
+                int header_size = (hdr_end + 4) - (char *)news_buf;
+                LOG_INF("Content-Length: %d  header: %d bytes",
+                        content_length, header_size);
+                if (total >= header_size + content_length) break;
+            }
+        } else {
+            char *hdr_end = strstr((char *)news_buf, "\r\n\r\n");
+            if (hdr_end) {
+                int header_size = (hdr_end + 4) - (char *)news_buf;
+                if (total >= header_size + content_length) break;
+            }
+        }
+    }
 
-	while (total < limetReturm) {
-		int r = zsock_poll(&fds, 1, 8000);
-		if (r == 0) {
-			LOG_WRN("poll timeout");
-			break;
-		}
-		if (r < 0 && !(fds.revents & ZSOCK_POLLIN)) {
-			LOG_WRN("poll error, no data: errno=%d revents=0x%x", errno, fds.revents);
-			break;
-		}
+    LOG_INF("Total bytes received: %d / Content-Length: %d",
+            total, content_length);
 
-		int n = recv(sock, shared_http_chunk,
-			     sizeof(shared_http_chunk) - 1, 0);
-		LOG_INF("recv returned %d", n);
-		if (n <= 0) break;
-		memcpy(shared_http_buf + total, shared_http_chunk, n);
-		total += n;
+    char *body = strstr((char *)news_buf, "\r\n\r\n");
+    if (body) {
+        body += 4;
+        parse_news_titles(body);
+    } else {
+        LOG_WRN("No HTTP body found");
+    }
 
-		if (content_length < 0) {
-			char *cl = strstr((char *)shared_http_buf, "Content-Length: ");
-			char *hdr_end = strstr((char *)shared_http_buf, "\r\n\r\n");
-			if (cl && hdr_end) {
-				content_length = atoi(cl + 16);
-				int header_size = (hdr_end + 4) - (char *)shared_http_buf;
-				LOG_INF("Content-Length: %d, header: %d", content_length, header_size);
-				if (total >= header_size + content_length) break;
-			}
-		} else {
-			char *hdr_end = strstr((char *)shared_http_buf, "\r\n\r\n");
-			if (hdr_end) {
-				int header_size = (hdr_end + 4) - (char *)shared_http_buf;
-				if (total >= header_size + content_length) break;
-			}
-		}
-	}
+    close(sock);
 
-	LOG_INF("Total bytes received: %d", total);
-
-	char *body = strstr((char *)shared_http_buf, "\r\n\r\n");
-	if (body) {
-		body += 4;
-		printk(body);
-	} else {
-		printk("No body found, raw: %.200s\n", shared_http_buf);
-	}
-
-	close(sock);
-	return total > 0 ? 0 : -1;
+    /* Success only if we received the full content */
+    if (content_length > 0) {
+        char *hdr_end  = strstr((char *)news_buf, "\r\n\r\n");
+        int   hdr_size = hdr_end ? (hdr_end + 4 - (char *)news_buf) : 0;
+        return (total >= hdr_size + content_length) ? 0 : -1;
+    }
+    return total > 0 ? 0 : -1;
 }
-
 
 /* =========================
  * MAIN NETWORK FUNCTION
@@ -203,29 +221,27 @@ LOG_INF("http_request() started: %s", path);
 
 void network_config_news(void)
 {
-	LOG_INF("Waiting for WiFi...");
+    LOG_INF("Waiting for WiFi...");
 
-	/* 1. Wait for WiFi FIRST */
-	if (k_sem_take(&wifi_ready_sem, K_SECONDS(60)) != 0) {
-		LOG_ERR("Timed out waiting for WiFi");
-		return;
-	}
+    if (k_sem_take(&wifi_ready_sem, K_SECONDS(60)) != 0) {
+        LOG_ERR("Timed out waiting for WiFi");
+        return;
+    }
 
-	while (1) {
-		LOG_INF("Waiting for HTTP slot...");
+    while (1) {
+        LOG_INF("Fetching /news");
+        int ret = http_request(HTTP_PATH);
 
-		/* 2. Lock the mutex ONLY for the request */
-		k_mutex_lock(&http_mutex, K_FOREVER);
-
-		LOG_INF("Requesting /news");
-		http_request(HTTP_PATH);
-
-		k_mutex_unlock(&http_mutex);
-
-		printk("\n");
-		LOG_INF("Sleeping...");
-		k_sleep(K_FOREVER);
-	}
+        if (ret == 0 && g_news.ready) {
+            LOG_INF("News fetched OK (%d titles) — sleeping forever",
+                    g_news.count);
+            k_sleep(K_FOREVER);
+        } else {
+            LOG_WRN("News fetch incomplete (got %d titles), retrying in 15 s",
+                    g_news.count);
+            k_sleep(K_SECONDS(15));
+        }
+    }
 }
 
 /* =========================

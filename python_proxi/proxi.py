@@ -216,6 +216,10 @@ def news():
 # INFO
 # =========================
 
+# =========================
+# INFO
+# =========================
+
 @app.route("/info")
 def info():
 
@@ -270,9 +274,35 @@ def info():
                 }
             )
 
+        #
+        # TIME / DATE
+        #
+
+        current_time = time.localtime()
+
+        weekday = time.strftime("%A", current_time)
+
+        day = time.strftime("%d", current_time)
+
+        month_name = time.strftime("%B", current_time)
+
+        current_clock = time.strftime("%H:%M:%S", current_time)
+
+        #
+        # JSON RESPONSE
+        #
+
         data = {
 
             "unix_epoch": int(time.time()),
+
+            "weekday": weekday,
+
+            "day": day,
+
+            "month": month_name,
+
+            "time": current_clock,
 
             "ip": client_ip,
 

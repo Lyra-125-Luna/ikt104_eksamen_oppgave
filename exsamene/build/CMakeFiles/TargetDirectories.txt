@@ -129,10 +129,6 @@
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/ipc/CMakeFiles/rebuild_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/CMakeFiles/edit_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/CMakeFiles/rebuild_cache.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/backends/CMakeFiles/edit_cache.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/backends/CMakeFiles/rebuild_cache.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/frontends/CMakeFiles/edit_cache.dir
-/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/frontends/CMakeFiles/rebuild_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/mem_mgmt/CMakeFiles/edit_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/mem_mgmt/CMakeFiles/rebuild_cache.dir
 /home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/mgmt/CMakeFiles/edit_cache.dir

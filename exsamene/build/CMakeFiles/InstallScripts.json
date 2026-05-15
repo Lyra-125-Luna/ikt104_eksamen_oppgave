@@ -43,8 +43,6 @@
 		"/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/instrumentation/cmake_install.cmake",
 		"/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/ipc/cmake_install.cmake",
 		"/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/cmake_install.cmake",
-		"/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/backends/cmake_install.cmake",
-		"/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/logging/frontends/cmake_install.cmake",
 		"/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/mem_mgmt/cmake_install.cmake",
 		"/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/mgmt/cmake_install.cmake",
 		"/home/luna/ikt104g26v/zephyr/assignments/exsamen/build/zephyr/subsys/modbus/cmake_install.cmake",
